@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dermasana | Depilación Láser de Alta Potencia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#000b60","primary-container":"#142283","on-primary":"#ffffff","secondary":"#006875","secondary-container":"#00e3fd","surface":"#f8f9fa","surface-container":"#edeeef","surface-container-low":"#f3f4f5","surface-container-high":"#e7e8e9","surface-container-highest":"#e1e3e4","surface-container-lowest":"#ffffff","on-surface":"#191c1d","on-surface-variant":"#454652","on-primary-container":"#8390f2","primary-fixed":"#dfe0ff","outline-variant":"#c6c5d4","tertiary-container":"#650027","tertiary-fixed-dim":"#ffb2bf"},fontFamily:{headline:["Manrope"],body:["Manrope"],label:["Plus Jakarta Sans"]}}}}
+</script>
+<style>
+body{font-family:'Manrope',sans-serif;background:#f8f9fa;color:#191c1d;scroll-behavior:smooth}
+html{scroll-behavior:smooth}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+.hero-gradient{background:linear-gradient(135deg,#000b60 0%,#142283 100%)}
+.ghost-border{border:1px solid rgba(198,197,212,0.2)}
+.radiance-glow{background:radial-gradient(circle at top right,rgba(101,0,39,0.1) 0%,transparent 50%)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes scroll-down{0%{opacity:0;transform:translateY(-8px)}50%{opacity:1}100%{opacity:0;transform:translateY(8px)}}
+.scroll-indicator{animation:scroll-down 2s ease-in-out infinite}
+.card-hover{transition:all .5s cubic-bezier(.23,1,.32,1)}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 60px -12px rgba(0,11,96,0.12)}
+.nav-scrolled{background:rgba(248,249,250,0.95)!important;box-shadow:0 4px 20px rgba(0,0,0,0.08)!important}
+.mobile-menu{transform:translateX(100%);transition:transform .3s ease}
+.mobile-menu.open{transform:translateX(0)}
+</style>
+</head>
+<body class="bg-surface overflow-x-hidden selection:bg-secondary-container selection:text-primary">
+<nav id="mainNav" class="fixed top-0 w-full z-50 bg-slate-50/70 backdrop-blur-xl shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black text-[#000b60] tracking-tighter">Dermasana</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#000b60] border-b-2 border-[#000b60] pb-1 text-sm font-semibold font-label" href="#centros">Centros</a>
+<a class="text-slate-600 hover:text-[#000b60] text-sm font-semibold font-label" href="#tech">Tecnología</a>
+<a class="text-slate-600 hover:text-[#000b60] text-sm font-semibold font-label" href="#quality">Continuidad</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg text-sm font-bold font-label hover:scale-105 transition-all shadow-md">WhatsApp Citas</button>
+<button id="menuBtn" class="md:hidden p-2 text-primary"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</nav>
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-3/4 h-full bg-white z-[60] shadow-2xl p-8 flex flex-col gap-6">
+<button id="closeMenu" class="self-end"><span class="material-symbols-outlined text-3xl text-primary">close</span></button>
+<a class="text-lg font-bold text-primary" href="#centros">Centros</a>
+<a class="text-lg text-slate-600" href="#tech">Tecnología</a>
+<a class="text-lg text-slate-600" href="#quality">Continuidad</a>
+</div>
+
+<main class="pt-20">
+<!-- Hero -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUO4XSzUafQTVe8k9cnDVp7egerTA_ozx-jJOaW5wM6RfEtnuATNOYBxn4ZRFJECdOcC8NwoDvodUigaUwgVD6kshmTHkm0WAPb9WCdPLbvN-4UPYEeCa7fhwVCWS4Qf3iVyheH4Mo_9twr59Vovik1_LewiakWPsiC4Tvabetfnm3Rj2-MqFuHzDgTGptz1-Kr--QWjRcSMTjeR8IvCDyAkfXdadkbfDk6SVOw0RPhARGmAp0qg3BdGcxOzlqi5p7sTEAYc3yxSw" alt="Dermasana"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-6 md:px-8 relative z-10">
+<div class="max-w-3xl" data-aos="fade-right" data-aos-duration="1000">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container/20 text-secondary-container text-xs font-bold font-label uppercase tracking-widest mb-6">Nueva Etapa</span>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight mb-6">Dermasana llega al Norte: <span class="text-secondary-container">Tu tratamiento continúa</span></h1>
+<p class="text-xl text-primary-fixed leading-relaxed mb-10 max-w-xl" data-aos="fade-up" data-aos-delay="200">Garantizamos la continuidad de tus sesiones de depilación láser con la tecnología más avanzada.</p>
+<div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+<button class="hero-gradient text-on-primary px-10 py-5 rounded-lg text-lg font-bold font-label shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-3"><span class="material-symbols-outlined">chat</span>Gestionar mi Cita</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-lg text-lg font-bold font-label hover:bg-white/20 transition-all">Ver Centros</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Transition -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-6 md:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7" data-aos="fade-right">
+<h2 class="text-4xl font-bold text-primary mb-8 tracking-tight">Compromiso y Bienvenida</h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+<p>Tras el cese de actividad de <strong>Centros Bedda</strong>, en Dermasana hemos asumido el compromiso de no dejar a ningún paciente sin su tratamiento.</p>
+<p>Nuestras clínicas están totalmente operativas y preparadas para recibirte.</p>
+</div>
+<div class="mt-10 flex flex-wrap gap-3">
+<span class="px-5 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm border border-outline-variant/10">Bilbao</span>
+<span class="px-5 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm border border-outline-variant/10">Barakaldo</span>
+<span class="px-5 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm border border-outline-variant/10">Donosti</span>
+<span class="px-5 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm border border-outline-variant/10">Irún</span>
+<span class="px-5 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm border border-outline-variant/10">Pamplona</span>
+<span class="px-5 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm border border-outline-variant/10">Santander</span>
+</div>
+</div>
+<div class="lg:col-span-5" data-aos="fade-left">
+<div class="relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsOz_YHv067OPdWWWbrAgCjkNtjDbDxMAbLeMeEXcjHjtmooEau8DYw0E3203vE9b4SAb_UUVyk7_NbbB-zEHEuIwOQQ4eUOVOdUw5ai11BmZ5PR5As8Is48i4mIty5HGJzFYX_9hMs40DXsZFshIh5wRlzRdWnj_fq2sb0gJfMv9tqxNb6kIZ7nDJZm4GjIhmQwaHghLgv998YDa0IJcJdqAwV7UEJ5NysBEdxRZHrmDkYl2C0BGqSzQCcRqwD_Hs4XVfdFbCKkE" alt="Welcome"/></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Tech -->
+<section id="tech" class="py-24 bg-surface">
+<div class="container mx-auto px-6 md:px-8">
+<div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+<h2 class="text-4xl font-extrabold text-primary mb-6 tracking-tighter">Tecnología de Vanguardia</h2>
+<p class="text-on-surface-variant text-lg">Resultados visibles desde la primera sesión.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="card-hover group p-10 rounded-2xl bg-surface-container-lowest radiance-glow shadow-sm border border-outline-variant/10" data-aos="fade-up"><div class="w-16 h-16 rounded-xl bg-secondary-container/10 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-4xl">speed</span></div><h3 class="text-2xl font-bold text-primary mb-4">Eficiencia</h3><p class="text-on-surface-variant">Sesiones más cortas y efectivas.</p></div>
+<div class="card-hover group p-10 rounded-2xl bg-surface-container-lowest radiance-glow shadow-sm border border-outline-variant/10" data-aos="fade-up" data-aos-delay="100"><div class="w-16 h-16 rounded-xl bg-secondary-container/10 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-4xl">verified_user</span></div><h3 class="text-2xl font-bold text-primary mb-4">Seguridad</h3><p class="text-on-surface-variant">Protocolos médicos estrictos.</p></div>
+<div class="card-hover group p-10 rounded-2xl bg-surface-container-lowest radiance-glow shadow-sm border border-outline-variant/10" data-aos="fade-up" data-aos-delay="200"><div class="w-16 h-16 rounded-xl bg-secondary-container/10 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-4xl">star_half</span></div><h3 class="text-2xl font-bold text-primary mb-4">Resultados</h3><p class="text-on-surface-variant">Eliminación permanente del vello.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Locations -->
+<section id="centros" class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-6 md:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8" data-aos="fade-up">
+<div><h2 class="text-4xl font-extrabold text-primary mb-4 tracking-tight">Nuestras Sedes</h2><p class="text-on-surface-variant text-lg">Localiza tu centro más cercano.</p></div>
+<a class="group flex items-center gap-4 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all" href="https://wa.me/34622516809"><div class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white"><span class="material-symbols-outlined">chat</span></div><div><p class="text-xs font-bold font-label text-slate-500 uppercase tracking-tighter">Atención Directa</p><p class="text-lg font-black text-primary">622 51 68 09</p></div></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="card-hover bg-surface-container-lowest p-8 rounded-xl ghost-border" data-aos="fade-up"><h4 class="text-xl font-bold text-primary mb-2">Irún</h4><p class="text-on-surface-variant font-label text-sm mb-6">Paseo Colón 32</p><button class="text-secondary font-bold text-sm flex items-center gap-2 group">Cómo llegar <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-xl ghost-border" data-aos="fade-up" data-aos-delay="50"><h4 class="text-xl font-bold text-primary mb-2">Bilbao - Zubiarte</h4><p class="text-on-surface-variant font-label text-sm mb-6">Centro Comercial Zubiarte</p><button class="text-secondary font-bold text-sm flex items-center gap-2 group">Cómo llegar <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-xl ghost-border" data-aos="fade-up" data-aos-delay="100"><h4 class="text-xl font-bold text-primary mb-2">Santander</h4><p class="text-on-surface-variant font-label text-sm mb-6">Calle Isabel II</p><button class="text-secondary font-bold text-sm flex items-center gap-2 group">Cómo llegar <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-xl ghost-border" data-aos="fade-up" data-aos-delay="150"><h4 class="text-xl font-bold text-primary mb-2">Donosti</h4><p class="text-on-surface-variant font-label text-sm mb-6">Avenida de la Libertad, 14</p><button class="text-secondary font-bold text-sm flex items-center gap-2 group">Cómo llegar <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-xl ghost-border" data-aos="fade-up" data-aos-delay="200"><h4 class="text-xl font-bold text-primary mb-2">Pamplona</h4><p class="text-on-surface-variant font-label text-sm mb-6">Avenida Carlos III</p><button class="text-secondary font-bold text-sm flex items-center gap-2 group">Cómo llegar <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-xl ghost-border" data-aos="fade-up" data-aos-delay="250"><h4 class="text-xl font-bold text-primary mb-2">Barakaldo</h4><p class="text-on-surface-variant font-label text-sm mb-6">Centro Comercial Megapark</p><button class="text-secondary font-bold text-sm flex items-center gap-2 group">Cómo llegar <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div>
+</div>
+</div>
+</section>
+
+<!-- Quality -->
+<section id="quality" class="py-24 bg-white overflow-hidden relative">
+<div class="container mx-auto px-6 md:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row gap-20 items-center">
+<div class="lg:w-1/2" data-aos="fade-right">
+<h2 class="text-4xl font-extrabold text-primary mb-8 tracking-tighter">Notre Charte Qualité</h2>
+<div class="space-y-8">
+<div class="flex gap-6"><div class="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white"><span class="material-symbols-outlined">visibility</span></div><div><h4 class="text-lg font-bold text-primary mb-2">Transparencia Total</h4><p class="text-on-surface-variant">Sin sorpresas ni costes ocultos.</p></div></div>
+<div class="flex gap-6"><div class="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white"><span class="material-symbols-outlined">health_and_safety</span></div><div><h4 class="text-lg font-bold text-primary mb-2">Seguridad Clínica</h4><p class="text-on-surface-variant">Supervisado por expertos.</p></div></div>
+<div class="flex gap-6"><div class="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white"><span class="material-symbols-outlined">sentiment_satisfied</span></div><div><h4 class="text-lg font-bold text-primary mb-2">Satisfacción del Paciente</h4><p class="text-on-surface-variant">Vuestra sonrisa es nuestra mejor carta.</p></div></div>
+</div>
+</div>
+<div class="lg:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-left">
+<img class="rounded-2xl w-full h-64 object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7je28pJsYxx2vK4A83RDEnztXkb6QCrE4gf6QJor4RKjegzrLon04huWyDm__31cYF4hLuLbDWxrsgcxU69B1ZWGtLeedVH3QMYZQrgrw767c5pgu2H5kgR-FODMTwQtRy5O5YoP2ATR_BsNpxARp42iMfyX3iNX6X_2kHn_aGh0NYET54XqFg-8xJkdFxgYdixtCjrNBXI_BS-OBdgTCAblB-uNJKvMgXofv2TUVhCQ3E0C1MyB03aGxIv4_vSRVW-5Oj_wxhL4" alt="Laser"/>
+<img class="rounded-2xl w-full h-80 object-cover shadow-lg translate-y-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6EoSUwQNBWlUb0_GEfZ3BAT4xse9gdum4vau4UgEV3gDHggbhPGs60nu3Puk3deN52GNtjkmwjTeKlEz4uzNUyGUn2j2q93_DGgL74HAB3llPEQCx0GCTWdzwer-9bU8Ttru3hGKtxxDmFpPOwpTD_he_ULreNs1uYue4IXXxWCe2Mfs2wckyklq6DiHHZ0e1RzHzzl9Ax3HcC60OJMKx8qJumqdSopuranOMY3GABSvmGUIwSCcG3thx1AmY9PJKiNR8hBEIplg" alt="Waiting"/>
+<img class="rounded-2xl w-full h-80 object-cover shadow-lg -translate-y-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPwgD3qfs7hCmrYiHQ8eLrzkoJGIe0MaUqeIV7juJMTFhNZWL_qz5xPL3S2fO5o_W5D4R63b-LSnm5XdX4VDFUAeWDrEG3Rh0CMZtDCCkUrRfDm1frQ3-KRGEfaCrlUv-5202rPGYLSnIssJ_E55b-ax0xuLvXAkLUEkHI47WUfkJ5fDdPskHxekFWHQ_MWEYuxU70sGA2eeh2eeT9no5wX8UoreDDECXODZhyLbHwan4l4y6sCkB9TlOCmIrQwKATxPwYTs7miMw" alt="Pro"/>
+<img class="rounded-2xl w-full h-64 object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdUuViyZfaeAtuFJEnggsKqI0aRpsus8r5Rf9dt5FTkcD_b6ISkGzPa0v2MTFK6vdmH94ja4iiLnicdnMGrDNgk5TBSzw--f99oIBVpWWehp4ZYW1JdzZCtcCtFdS81tBdsGVFkNa4J9vvUhBA5HuRNTtmG_5K1J3WDk0Od99dzoqvcMrF_0ZOuBN783WcfaHWkdtlvjk0xMIvLMA1NqBJ3Ox7hG3XF0xfu6RWDWeVNWVbve9Zl0DpTGQupOyjW--DFv4WNS_Nx0" alt="Equipment"/>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Info Banner -->
+<section class="py-16 hero-gradient text-white" data-aos="fade-up">
+<div class="container mx-auto px-6 md:px-8"><div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10"><div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-4xl">info</span></div><div><h3 class="text-2xl font-bold mb-4">Otras localizaciones en proceso</h3><p class="text-primary-fixed leading-relaxed opacity-90">Si eras cliente en <strong>Lugo, Ponferrada, Burgos o Valladolid</strong>, estamos trabajando para habilitar vuestra reubicación.</p></div></div></div>
+</section>
+</main>
+
+<footer class="bg-slate-50 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 md:px-12 py-20 max-w-7xl mx-auto">
+<div class="space-y-6"><div class="text-xl font-bold text-[#000b60]">Dermasana</div><p class="text-sm text-slate-500 leading-relaxed">Especialistas en depilación láser de alta potencia.</p></div>
+<div class="space-y-6"><h5 class="text-xs font-bold font-label uppercase tracking-widest text-[#000b60]">Legal</h5><div class="flex flex-col gap-3"><a class="text-slate-500 text-sm hover:text-primary" href="#">Aviso Legal</a><a class="text-slate-500 text-sm hover:text-primary" href="#">Privacidad</a></div></div>
+<div class="space-y-6"><h5 class="text-xs font-bold font-label uppercase tracking-widest text-[#000b60]">Contacto</h5><p class="text-sm text-slate-500">¿Dudas?<br/><span class="text-primary font-bold text-lg">622 51 68 09</span></p></div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-8 md:px-12"><p class="text-center text-xs font-label text-slate-400">© 2024 Dermasana. Todos los derechos reservados.</p></div>
+</footer>
+
+<script>
+AOS.init({once:true,duration:700,easing:'ease-out-cubic'});
+const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+document.getElementById('menuBtn')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.add('open')});
+document.getElementById('closeMenu')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.remove('open')});
+document.querySelectorAll('#mobileMenu a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'))});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body></html>

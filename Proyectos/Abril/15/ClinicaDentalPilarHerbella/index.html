@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clínica Dental Pilar Herbella | Excelencia Dental en Irún</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#1d416d","primary-container":"#375986","secondary":"#775a19","secondary-container":"#fed488","secondary-fixed":"#ffdea5","secondary-fixed-dim":"#e9c176","surface":"#f8f9fa","surface-dim":"#d9dadb","surface-container":"#edeeef","surface-container-low":"#f3f4f5","surface-container-high":"#e7e8e9","surface-container-highest":"#e1e3e4","surface-container-lowest":"#ffffff","on-surface":"#191c1d","on-surface-variant":"#434653","on-primary":"#ffffff","primary-fixed":"#d4e3ff","primary-fixed-dim":"#a7c8fc","outline-variant":"#c3c6d5","outline":"#737784","on-secondary-fixed":"#261900"},fontFamily:{headline:["Manrope"],body:["Manrope"],label:["Manrope"]}}}}
+</script>
+<style>
+body{font-family:'Manrope',sans-serif;background:#f8f9fa;color:#191c1d;scroll-behavior:smooth}
+html{scroll-behavior:smooth}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
+.glass-nav{background:rgba(255,255,255,0.8);backdrop-filter:blur(20px)}
+.btn-gradient{background:linear-gradient(135deg,#1d416d 0%,#375986 100%)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(29,65,109,0.3)}50%{box-shadow:0 0 20px 5px rgba(29,65,109,0.1)}}
+@keyframes scroll-down{0%{opacity:0;transform:translateY(-8px)}50%{opacity:1}100%{opacity:0;transform:translateY(8px)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.float-anim{animation:float 6s ease-in-out infinite}
+.pulse-glow{animation:pulse-glow 3s ease-in-out infinite}
+.scroll-indicator{animation:scroll-down 2s ease-in-out infinite}
+.shimmer-btn{background:linear-gradient(90deg,#1d416d 0%,#375986 40%,#4a72a8 50%,#375986 60%,#1d416d 100%);background-size:200% 100%}
+.shimmer-btn:hover{animation:shimmer 2s linear infinite}
+.card-hover{transition:all .5s cubic-bezier(.23,1,.32,1)}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 60px -12px rgba(29,65,109,0.15)}
+.nav-scrolled{background:rgba(255,255,255,0.95)!important;box-shadow:0 4px 20px rgba(0,0,0,0.08)!important}
+.mobile-menu{transform:translateX(100%);transition:transform .3s ease}
+.mobile-menu.open{transform:translateX(0)}
+</style>
+</head>
+<body class="bg-surface overflow-x-hidden">
+<header id="mainNav" class="fixed top-0 w-full z-50 glass-nav shadow-sm transition-all duration-500">
+<nav class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-primary">Pilar Herbella</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-primary transition-colors font-label text-sm tracking-wide uppercase" href="#tratamientos">Tratamientos</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label text-sm tracking-wide uppercase" href="#experiencia">La Clínica</a>
+<a class="text-primary font-bold border-b-2 border-secondary-fixed pb-1 font-label text-sm tracking-wide uppercase" href="#contacto">Contacto</a>
+</div>
+<button class="shimmer-btn text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:scale-105 transition-all active:scale-95">Pedir Cita</button>
+<button id="menuBtn" class="md:hidden p-2 text-primary"><span class="material-symbols-outlined">menu</span></button>
+</nav>
+</header>
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-3/4 h-full bg-white z-[60] shadow-2xl p-8 flex flex-col gap-6">
+<button id="closeMenu" class="self-end"><span class="material-symbols-outlined text-3xl text-primary">close</span></button>
+<a class="text-lg font-bold text-primary" href="#tratamientos">Tratamientos</a>
+<a class="text-lg text-slate-600" href="#experiencia">La Clínica</a>
+<a class="text-lg text-slate-600" href="#contacto">Contacto</a>
+</div>
+
+<main class="pt-16">
+<!-- Hero -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10 py-12" data-aos="fade-right" data-aos-duration="1000">
+<span class="inline-block text-secondary font-label text-sm tracking-[0.2em] uppercase mb-4">Especialistas en Sonrisas</span>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-headline font-extrabold text-primary leading-[1.1] tracking-tighter mb-6">Excelencia Dental con un <span class="text-secondary italic font-light">Toque Personal</span> en Irún</h1>
+<p class="text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200">Más de 28 años perfeccionando sonrisas con la tecnología más avanzada y un trato cercano.</p>
+<div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="400">
+<button class="shimmer-btn text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg flex items-center gap-2 group hover:scale-105 transition-all">Pedir Cita Ahora <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></button>
+</div>
+</div>
+<div class="lg:col-span-6 relative h-[500px] lg:h-[700px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+<div class="absolute inset-0 bg-secondary-fixed/10 rounded-full blur-3xl -z-10 translate-x-20"></div>
+<img alt="Clínica Pilar Herbella" class="w-full h-full object-cover rounded-3xl shadow-2xl z-20 hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW2jI-x_H7cUJzAFz8sOyTsJ3QC-86KOce25pbU9pV37OONlXFtCI5F-of8gLweyXYXQDOR4ZlEScEP6Z0edCMPQoreGQnyDh_Jqvg3NDFH4lH1QSIvYhe1Wy3WGhXSu394AkoPOigI4EHFsuDaEEdfC2X9yH9E8u3AraLvL0hCP2xSwYX8hiP6qIcHVL2747dyHIvofiUD2w_T0PKeADOhy-ql9-ZBvm_kuJHxFCReJF9XdFv6c2W2a566BYK0sZG1VdAPcGOMX0"/>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-30 max-w-[240px] float-anim pulse-glow" data-aos="zoom-in" data-aos-delay="800">
+<div class="flex items-center gap-4 mb-2"><span class="material-symbols-outlined text-secondary text-4xl">verified</span><span class="text-primary font-bold text-2xl counter" data-target="28">0</span><span class="text-primary font-bold text-2xl">+</span></div>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold">Años de Trayectoria Impecable</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"><span class="text-xs text-on-surface-variant uppercase tracking-widest">Scroll</span><span class="material-symbols-outlined text-primary scroll-indicator">expand_more</span></div>
+</section>
+
+<!-- Treatments Bento -->
+<section id="tratamientos" class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="mb-16 text-center lg:text-left" data-aos="fade-up">
+<span class="text-secondary font-label text-sm tracking-[0.2em] uppercase mb-2 block">Nuestras Especialidades</span>
+<h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Tratamientos Destacados</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl bg-primary min-h-[400px] card-hover" data-aos="fade-up">
+<img alt="Implantología" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiIJpOcICGIJeSdm-lP9qvLxIVmhlbk5osYzEjRsKN5QP7NLE7M7FBxcg44eTYy2HLercRWc_4IfHV2T0lXDbWyE2KOf53hkFVOLmnuFxsxcxaRQvgK1Jc9GZaUfS40ryPAtENGAvmdmZW-5kgfaZvixR9RAo0gXfXGxVDNatQQzwcO7Wzmzq3OzfFCmoY6GyXSi2ZUeliZRMJg6_-uFeKKTpaGPCJ3gV_oxi2Gv-78eyBagNSsZ-hTMX13NpDWTcuh3NQqgriLM8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-10"><span class="material-symbols-outlined text-white text-5xl mb-4">precision_manufacturing</span><h3 class="text-3xl font-headline font-bold text-white mb-2">Implantología Avanzada</h3><p class="text-primary-fixed-dim max-w-md">Recupere su funcionalidad y estética con las técnicas más innovadoras y menos invasivas.</p></div>
+</div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10" data-aos="fade-up" data-aos-delay="100">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">auto_awesome</span><h3 class="text-xl font-headline font-bold text-primary mb-3">Estética Dental</h3><p class="text-on-surface-variant text-sm leading-relaxed">Diseño de sonrisa, carillas de porcelana y blanqueamientos de última generación.</p>
+</div>
+<div class="card-hover bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10" data-aos="fade-up" data-aos-delay="200">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">biotech</span><h3 class="text-xl font-headline font-bold text-primary mb-3">Endodoncia</h3><p class="text-on-surface-variant text-sm leading-relaxed">Preservamos sus piezas originales con tratamientos precisos y sin dolor.</p>
+</div>
+<div class="card-hover bg-surface-container-low p-8 rounded-3xl border border-outline-variant/10" data-aos="fade-up" data-aos-delay="100">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">child_care</span><h3 class="text-xl font-headline font-bold text-primary mb-3">Odontopediatría</h3><p class="text-on-surface-variant text-sm">Cuidamos la sonrisa de los más pequeños.</p>
+</div>
+<div class="card-hover bg-surface-container-low p-8 rounded-3xl border border-outline-variant/10" data-aos="fade-up" data-aos-delay="200">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">healing</span><h3 class="text-xl font-headline font-bold text-primary mb-3">Regeneración Ósea</h3><p class="text-on-surface-variant text-sm">Soluciones avanzadas para la reconstrucción de tejidos.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Experience -->
+<section id="experiencia" class="py-24 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 relative" data-aos="fade-right">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img alt="Tecnología" class="rounded-2xl w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC53qMaLkFM31HQ5mi7RaKXZXC_vp4ojuPOku0RyQMWmAQ71Rm6iFmZNm28q9VN6aS7GO69uHAkdemGP8cLr01bIgPP-wjEXdTd0wrmWqpMTUorecDVP7vXUmuqgCkXt8uZ3cs5MU_8j45wLgcp4Ix8beOmYY6xUoJWtSCB3eYpXP0gW74BUbZ6fZg5Zm7u3lR7WbscGXNYPsjpTtLMlZO3d6pffs9zegyiPkNFM3OGwAVRGMTv24z-oNTq-BSQzF3JT_7FTU6zAMc"/>
+<img alt="Trato cercano" class="rounded-2xl w-full h-64 object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2orlzaaYAXiei_iGu6oI6DZ03aMqr3I7ZvwK5bHpxdvgPDW5D-J0dBuaxMZOFpBbl_ENursc1paj5igQTQnVbPvVetcXmiGV-ZppkAp8knMPmfyIoYeJeK6VsMadI5foIJ-Q_41HRdgNmfyxYAiduTaERT_ghy6_qIqDTC3Jt919ICO7jfXlbUur5SrLGYs3sCwg5tWQSsuZlIbKAG9sGFJiEJ_ULmMU6SPZS001YvzogqXGO2iukKby33gvtKtEOr5efLfJE4Wc"/>
+</div>
+<div class="pt-8 space-y-4">
+<img alt="Clínica" class="rounded-2xl w-full h-64 object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDme7PuahVKGtIbU4nN1N1BdpOeJ89cAbJXIXVlkiWWsRJiGriOapEEIDGzmYGA-lv1loQusrDrlbnW--UJGgbgRxAWphqfjaPHbRigwoSzWglzqRyQ1JwLTYS_N7gg4mn3sqRFVWCsgUGZnhFDldgP1oFb4t-JC3dAS_ivnVFs1B84iNMVo_UHJWLcHSYslTgmQaEXkwMOIz481sRtaUl816JMwnnKObzuLXGUK2flvP4PB1l3M8sonNBPKl_ZASN4gtMR9pgkcLY"/>
+<img alt="Higiene" class="rounded-2xl w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgwpTF_CcaiW5Eru4CHOYcqFiawUmkw755mllp5Ix1KM5KWmreXGV2vXoY9WqAD7ripe7n19UYmqa7i5500otxeAZPruYWr742h_DxsTMVkWlLmOJPSXQHOfCTqh8VCM4g9gdU0GxiSyur1cfUpgM8ET8HWFCKC6BPM6TjBGqQZ7LoDJ_eZzckxwvU_wk55GOF_bWA9YXtU0VSDm1nggDuNFwF-C4xbFcC0kGcud6l_sewGYzBKTLJ-XzfBeki0HpjJxqhETfbIE8"/>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2" data-aos="fade-left">
+<span class="text-secondary font-label text-sm tracking-[0.2em] uppercase mb-4 block">El Valor de la Experiencia</span>
+<h2 class="text-4xl font-headline font-bold text-primary mb-8 leading-tight">Compromiso con la Excelencia</h2>
+<div class="space-y-8">
+<div class="flex gap-6"><div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary">history</span></div><div><h4 class="font-bold text-primary mb-1">28 Años de Trayectoria</h4><p class="text-on-surface-variant text-sm">Casi tres décadas cuidando de la salud bucodental de Irún.</p></div></div>
+<div class="flex gap-6"><div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary">memory</span></div><div><h4 class="font-bold text-primary mb-1">Aparatología de Última Generación</h4><p class="text-on-surface-variant text-sm">Invertimos constantemente en tecnología digital para diagnósticos más precisos.</p></div></div>
+<div class="flex gap-6"><div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary">handshake</span></div><div><h4 class="font-bold text-primary mb-1">Trato Humano y Cercano</h4><p class="text-on-surface-variant text-sm">En nuestra clínica no eres un número. Priorizamos la escucha activa.</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Insurers -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 md:px-8" data-aos="fade-up">
+<div class="text-center mb-12"><p class="text-on-surface-variant font-label text-xs tracking-widest uppercase opacity-70">Trabajamos con las principales aseguradoras</p></div>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<span class="text-xl font-bold font-headline text-primary">IMQ</span>
+<span class="text-xl font-bold font-headline text-primary">Adeslas</span>
+<span class="text-xl font-bold font-headline text-primary">Asisa</span>
+<span class="text-xl font-bold font-headline text-primary">AXA</span>
+<span class="text-xl font-bold font-headline text-primary">Sanitas</span>
+<span class="text-xl font-bold font-headline text-primary">DKV</span>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contacto" class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm" data-aos="fade-up">
+<div class="p-8 md:p-12 lg:p-16">
+<h2 class="text-3xl font-headline font-bold text-primary mb-8">Contacto y Ubicación</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-secondary">location_on</span><div><p class="font-bold text-primary">Nuestra Clínica</p><p class="text-on-surface-variant">C/ San Pedro Nº9 - 4C<br/>20304 Irún, Guipúzcoa</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-secondary">call</span><div><p class="font-bold text-primary">Teléfono</p><p class="text-on-surface-variant">+34 943 00 00 00</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-secondary">schedule</span><div><p class="font-bold text-primary">Horario</p><ul class="text-on-surface-variant text-sm space-y-1"><li>Lunes - Jueves: 09:00 - 13:00 | 15:30 - 19:30</li><li>Viernes: 09:00 - 15:00</li></ul></div></div>
+</div>
+<button class="mt-12 w-full py-4 border-2 border-primary text-primary rounded-xl font-bold hover:bg-primary hover:text-white transition-all">Ver en Google Maps</button>
+</div>
+<div class="relative min-h-[400px] bg-slate-200">
+<div class="absolute inset-0 grayscale contrast-125 opacity-70"><img alt="Mapa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALd2inWkxOQfNPfkJb8wggNOnIPszou1TaNRjOUkBG-cvr6O0Rga9QTtxs4MahNAS0ryzLGXa5upAspf11aU4Yi0ZjRKQGqrGeSPo3lqIplww0I5uaCpmDYwpS8y9yF9a99RqkiqqW7j5MrU82GyC8u2ztsH-BStZu7H-_TIugBXhnG9z5vk6A_FctgsZvtAvxY7XS95OmZi6kpapI7sACsHjs_Coxq87Nx_Xw1A0tRngNtxkwKvNlZtChTqZ0Kpl2vhkfa-W95IU"/></div>
+<div class="absolute inset-0 flex items-center justify-center"><div class="bg-primary text-white p-4 rounded-full shadow-2xl animate-bounce"><span class="material-symbols-outlined">dentistry</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="btn-gradient p-8 sm:p-12 lg:p-20 rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in-up">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32 blur-3xl"></div>
+<h2 class="text-3xl md:text-5xl font-headline font-bold text-white mb-6 relative z-10">¿Listo para redescubrir tu sonrisa?</h2>
+<p class="text-primary-fixed text-lg mb-12 max-w-2xl mx-auto relative z-10">Solicita hoy mismo tu primera consulta sin compromiso.</p>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-xl">Pedir Cita Ahora</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all">Llamar Directamente</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-slate-50 border-t border-slate-100">
+<div class="max-w-7xl mx-auto px-6 md:px-8 py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2"><div class="text-2xl font-bold text-primary mb-6">Pilar Herbella</div><p class="text-on-surface-variant text-sm max-w-sm leading-relaxed">Comprometidos con la excelencia odontológica en Irún.</p></div>
+<div><h5 class="font-bold text-primary mb-6 uppercase tracking-wider text-xs">Menú</h5><ul class="space-y-4 text-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" href="#">Inicio</a></li><li><a class="hover:text-secondary transition-colors" href="#">Tratamientos</a></li><li><a class="hover:text-secondary transition-colors" href="#">Contacto</a></li></ul></div>
+<div><h5 class="font-bold text-primary mb-6 uppercase tracking-wider text-xs">Legal</h5><ul class="space-y-4 text-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" href="#">Aviso Legal</a></li><li><a class="hover:text-secondary transition-colors" href="#">Privacidad</a></li><li><a class="hover:text-secondary transition-colors" href="#">Cookies</a></li></ul></div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-200 gap-6">
+<p class="text-xs font-label tracking-wider text-slate-500">© 2024 Clínica Dental Pilar Herbella.</p>
+</div>
+</div>
+</footer>
+
+<script>
+AOS.init({once:true,duration:700,easing:'ease-out-cubic'});
+const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+document.getElementById('menuBtn')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.add('open')});
+document.getElementById('closeMenu')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.remove('open')});
+document.querySelectorAll('#mobileMenu a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'))});
+const counters=document.querySelectorAll('.counter');const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.target;let c=0;const inc=t/60;const timer=setInterval(()=>{c+=inc;if(c>=t){c=t;clearInterval(timer)}e.target.textContent=Math.floor(c)},25);obs.unobserve(e.target)}})},{threshold:0.5});counters.forEach(c=>obs.observe(c));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body></html>

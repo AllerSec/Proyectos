@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velo Performance | Urko Landa Sports Health Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#73ffe3","primary-container":"#00f5d4","on-primary":"#006152","secondary":"#cfdef5","surface":"#060e20","on-surface":"#dee5ff","surface-variant":"#192540","surface-container":"#0f1930","surface-container-high":"#141f38","surface-container-highest":"#192540","surface-container-low":"#091328","surface-container-lowest":"#000000","outline-variant":"#40485d","on-surface-variant":"#a3aac4"},fontFamily:{headline:["Space Grotesk"],body:["Inter"],label:["Inter"]}}}}
+</script>
+<style>
+body{font-family:'Inter',sans-serif;background:#060e20;color:#dee5ff;scroll-behavior:smooth}
+.font-headline{font-family:'Space Grotesk',sans-serif}
+html{scroll-behavior:smooth}
+.glass-panel{background:rgba(25,37,64,0.6);backdrop-filter:blur(20px);border:1px solid rgba(163,170,196,0.15)}
+.primary-gradient{background:linear-gradient(135deg,#73ffe3 0%,#00f5d4 100%)}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(115,255,227,0.3)}50%{box-shadow:0 0 25px 8px rgba(115,255,227,0.1)}}
+@keyframes scroll-down{0%{opacity:0;transform:translateY(-8px)}50%{opacity:1}100%{opacity:0;transform:translateY(8px)}}
+.float-anim{animation:float 6s ease-in-out infinite}
+.pulse-glow{animation:pulse-glow 3s ease-in-out infinite}
+.scroll-indicator{animation:scroll-down 2s ease-in-out infinite}
+.card-hover{transition:all .5s cubic-bezier(.23,1,.32,1)}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 60px -12px rgba(115,255,227,0.1)}
+.nav-scrolled{background:rgba(9,19,40,0.95)!important;box-shadow:0 4px 20px rgba(0,0,0,0.3)!important}
+.metric-gauge-track{stroke:#40485d;fill:none;stroke-width:2}
+.metric-gauge-progress{stroke:#73ffe3;fill:none;stroke-width:2;stroke-dasharray:100;stroke-dashoffset:25;transition:stroke-dashoffset 1.5s ease}
+.mobile-menu{transform:translateX(100%);transition:transform .3s ease}
+.mobile-menu.open{transform:translateX(0)}
+</style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<header id="mainNav" class="fixed top-0 w-full z-50 bg-[#091328] border-none transition-all duration-500">
+<nav class="flex justify-between items-center px-6 md:px-8 py-4 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#dee5ff] font-headline uppercase">VELO PERFORMANCE</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#dee5ff] opacity-70 hover:opacity-100 hover:text-[#73ffe3] transition-all font-headline tracking-tight uppercase text-sm" href="#rehab">Rehabilitation</a>
+<a class="text-[#dee5ff] opacity-70 hover:opacity-100 hover:text-[#73ffe3] transition-all font-headline tracking-tight uppercase text-sm" href="#bio">Biomechanics</a>
+<a class="text-[#dee5ff] opacity-70 hover:opacity-100 hover:text-[#73ffe3] transition-all font-headline tracking-tight uppercase text-sm" href="#contact">Contact</a>
+</div>
+<button class="hidden md:block primary-gradient text-on-primary px-6 py-2 rounded-lg font-headline font-bold text-xs uppercase tracking-widest hover:scale-105 transition-transform duration-200">Book Session</button>
+<button id="menuBtn" class="md:hidden p-2 text-primary"><span class="material-symbols-outlined">menu</span></button>
+</nav>
+</header>
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-3/4 h-full bg-[#091328] z-[60] shadow-2xl p-8 flex flex-col gap-6">
+<button id="closeMenu" class="self-end text-primary"><span class="material-symbols-outlined text-3xl">close</span></button>
+<a class="text-lg font-bold text-primary font-headline uppercase" href="#rehab">Rehabilitation</a>
+<a class="text-lg text-[#dee5ff] font-headline uppercase" href="#bio">Biomechanics</a>
+<a class="text-lg text-[#dee5ff] font-headline uppercase" href="#contact">Contact</a>
+</div>
+
+<main class="pt-20">
+<!-- Hero -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1r6i7k__TdBiA5JUmbhgUqA5URNq01QAJPXvzxbgWPPRT8kBXCRwFuRY2vajRIL9z1DRN5YZ0ib9qb-cUSOvZnxTfOAuRZYRHo84egIcsgRa6Zrcy4bgoex5IzTwKyJwm2NCUIbt7H8954cXQERIbQIGTymo5whPWWB2j5lUGKUeg0_fBQotcwhKvBR0FJjkOxhIpO9HNpUU64zzFL9mTi87hrIB-a2rZPIpSq-v8uFi99O53DyHzGuc7HjXagw_lqJQ_U4Eok_E" alt="Cycling lab"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#060e20] via-[#060e20]/80 to-transparent"></div>
+</div>
+<div class="container mx-auto px-6 md:px-8 relative z-10">
+<div class="max-w-4xl" data-aos="fade-right" data-aos-duration="1000">
+<span class="inline-block py-1 px-3 mb-6 bg-[#39485a] text-[#c2d2e8] rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">Urko Landa Sports Health Center</span>
+<h1 class="text-5xl md:text-8xl font-headline font-bold text-on-surface leading-[0.9] tracking-tighter mb-8">
+Optimización del <span class="text-primary">Rendimiento</span> y Recuperación de Élite
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10" data-aos="fade-up" data-aos-delay="200">Ciencia aplicada al deporte. Un enfoque clínico especializado en biomecánica y readaptación para atletas de alto nivel.</p>
+<div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="400">
+<button class="primary-gradient text-on-primary px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest flex items-center gap-2 hover:scale-105 transition-transform">Comenzar Evaluación <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+<button class="px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest border border-outline-variant/30 hover:bg-surface-variant transition-colors">Nuestros Servicios</button>
+</div>
+</div>
+</div>
+<div class="hidden lg:block absolute bottom-20 right-20 glass-panel p-6 rounded-xl w-64 float-anim pulse-glow" data-aos="zoom-in" data-aos-delay="800">
+<div class="flex items-center justify-between mb-4">
+<span class="text-[10px] font-bold tracking-widest uppercase opacity-60">VO2 Max Efficiency</span>
+<span class="text-primary font-headline font-bold">84.2</span>
+</div>
+<div class="h-1 bg-outline-variant rounded-full overflow-hidden"><div class="h-full bg-primary w-[84%]"></div></div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest">Scroll</span>
+<span class="material-symbols-outlined text-primary scroll-indicator">expand_more</span>
+</div>
+</section>
+
+<!-- Clinical Excellence -->
+<section class="py-24 bg-[#060e20]">
+<div class="container mx-auto px-6 md:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div data-aos="fade-right">
+<h2 class="text-4xl font-headline font-bold tracking-tighter mb-6 uppercase">Clinical Excellence</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+<p>Bajo la dirección de <strong class="text-on-surface">Urko Landa</strong>, profesional con trayectoria internacional en equipos de élite como <span class="text-primary font-bold">UAE Team Emirates</span> y <span class="text-primary font-bold">AusCycling</span>.</p>
+<p>Nuestro centro integra la tecnología de diagnóstico más avanzada con un conocimiento profundo de la fisiología humana aplicada al ciclismo y deportes de resistencia.</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div data-aos="zoom-in" data-aos-delay="200"><div class="text-4xl font-headline font-bold text-primary mb-1 counter" data-target="15">0</div><span class="text-4xl font-headline font-bold text-primary">+</span><div class="text-xs font-bold uppercase tracking-widest opacity-60">Años de Experiencia</div></div>
+<div data-aos="zoom-in" data-aos-delay="400"><div class="text-4xl font-headline font-bold text-primary mb-1 counter" data-target="500">0</div><span class="text-4xl font-headline font-bold text-primary">+</span><div class="text-xs font-bold uppercase tracking-widest opacity-60">Atletas de Élite</div></div>
+</div>
+</div>
+<div class="relative" data-aos="fade-left">
+<div class="aspect-square rounded-xl overflow-hidden glass-panel p-2">
+<img class="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW-RtL4cjTv_KWU_VpCTEHfNoeS4OBJMUm4fdGXv90LyfeGS2D__Tt6cRkU_o9uY2OxwsIaZE4WxsjbQjJ2U7KyMfCCzuOzTKZQqqILdJfLt5BV1UlPKSSjAzSDy8kERkjDp3qtfALKoMIP1Zu3_6adcSJ9Zo9ikkN7UMWXvkglpTWKrTDWyhmepaX35un24YMMU-KXc7u69gz1fmQP5cMS1mw3cE5yKCGSRHns8OpEEXlttaQSM9y1vGUPmwVB1Str9OGO-QTzdE" alt="Clinical assessment"/>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-panel p-8 rounded-xl max-w-xs" data-aos="fade-up" data-aos-delay="400">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">medical_services</span>
+<h4 class="font-headline font-bold mb-2">Protocolo UAE</h4>
+<p class="text-sm opacity-60">Implementamos los mismos estándares de recuperación utilizados en el UCI WorldTour.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features Grid -->
+<section id="rehab" class="py-32 bg-[#091328]">
+<div class="container mx-auto px-6 md:px-8">
+<div class="mb-16" data-aos="fade-up">
+<h2 class="text-4xl font-headline font-bold tracking-tighter uppercase mb-4">Áreas de Especialización</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4">
+<div class="md:col-span-2 card-hover bg-[#192540] p-10 rounded-xl relative overflow-hidden group" data-aos="fade-up">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div><span class="material-symbols-outlined text-primary text-3xl mb-6">sprint</span>
+<h3 class="text-3xl font-headline font-bold mb-4 uppercase">Rehabilitación Deportiva</h3>
+<p class="text-on-surface-variant max-w-md">Protocolos acelerados basados en evidencia científica para minimizar el tiempo fuera de competición.</p></div>
+<button class="mt-8 flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all">Explorar Programa <span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<img class="absolute top-0 right-0 h-full w-1/3 object-cover opacity-20 grayscale group-hover:opacity-40 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU-JkvrM9DvV9F5qBhDb4btE9oB69AnWmAwJP58waJOUzyg-H-KBPyjh-cZmLDlQEGWyWim4HorutxIaRIn-EibdDZwwRsmCZURKkzWfkf-oMxpEnhmIjbQDvYtOhSiFD9ar7y3EBihtlLMquYQGTuTxv8K2-zIpXNyM1-iqf7oLA5PgttziBD4kbI5YTUmSfu3IxL94jU68BNKh3hworqyASVOhrRWoG75txVdSZst1qo6vPczGs80LfVk8rdthlS7l7qrZngybs" alt="Rehab"/>
+</div>
+<div id="bio" class="card-hover bg-[#192540] p-10 rounded-xl flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+<div><span class="material-symbols-outlined text-primary text-3xl mb-6">pedal_bike</span>
+<h3 class="text-2xl font-headline font-bold mb-4 uppercase">Biomecánica</h3>
+<p class="text-sm text-on-surface-variant">Análisis cinemático detallado para optimizar la posición sobre la bicicleta.</p></div>
+<div class="mt-6 pt-6 border-t border-outline-variant/20"><div class="flex justify-between items-center"><span class="text-[10px] font-bold opacity-40 uppercase">Precision</span><span class="text-primary text-xl font-headline">99.9%</span></div></div>
+</div>
+<div class="card-hover bg-[#0f1930] p-10 rounded-xl flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+<div><span class="material-symbols-outlined text-primary text-3xl mb-6">healing</span>
+<h3 class="text-2xl font-headline font-bold mb-4 uppercase">Readaptación</h3>
+<p class="text-sm text-on-surface-variant">El puente crítico entre la camilla y la vuelta al 100% de la carga competitiva.</p></div>
+<button class="mt-8 flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs">Ver Fases <span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="md:col-span-2 card-hover bg-[#192540] p-10 rounded-xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+<div class="relative z-10 flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1"><span class="material-symbols-outlined text-primary text-3xl mb-6">self_improvement</span>
+<h3 class="text-3xl font-headline font-bold mb-4 uppercase">Masaje & Osteopatía</h3>
+<p class="text-on-surface-variant">Terapia manual avanzada enfocada en la salud estructural y la liberación miofascial profunda.</p>
+<div class="mt-8 flex gap-4"><span class="px-3 py-1 bg-[#0f1930] rounded-full text-[10px] font-bold uppercase">Manual</span><span class="px-3 py-1 bg-[#0f1930] rounded-full text-[10px] font-bold uppercase">Osteopatía</span><span class="px-3 py-1 bg-[#0f1930] rounded-full text-[10px] font-bold uppercase">Fisioterapia</span></div>
+</div>
+<div class="w-48 h-48 relative flex items-center justify-center">
+<svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 36 36"><circle class="metric-gauge-track" cx="18" cy="18" r="16"></circle><circle class="metric-gauge-progress" cx="18" cy="18" r="16"></circle></svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center"><span class="text-2xl font-headline font-bold">100%</span><span class="text-[8px] font-bold uppercase opacity-60">Focus</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-24 bg-[#060e20]">
+<div class="container mx-auto px-6 md:px-8 text-center mb-16" data-aos="fade-up">
+<h2 class="text-4xl font-headline font-bold tracking-tighter uppercase">Athlete Insights</h2>
+</div>
+<div class="container mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-panel p-10 rounded-xl relative border-l-4 border-primary card-hover" data-aos="fade-up" data-aos-delay="0">
+<span class="material-symbols-outlined text-primary text-4xl absolute top-8 right-8 opacity-20">format_quote</span>
+<p class="text-xl italic text-on-surface-variant mb-8 leading-relaxed">"La precisión de Urko en el ajuste biomecánico cambió completamente mi rendimiento en las cronos."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#192540] overflow-hidden"><img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw52XRZqw2Dx14pyuW2My53tzuYJQSP91-gIOIHEi4GRrrmSYDlgyFJWmYRaROv0eWrzz6snM--1CRRqdzLucii9_IWZykkhbrc9MsEMm8m0Kj4XlYqZLb030rK-2OOq_70-bW5FqYX_StcK6qm7Z5DpQse_Se1YdFu5I0veEqatYN6E1vuVyzi_daXJd1I02sXKqzB1q3TH5b_DxgMmUT4T6Trqid8TcVh9Y4IIn3_WDCGDXw8aycusZ2D4UliuZmhC7qM8a4dzQ" alt="Carlos"/></div>
+<div class="text-left"><div class="font-headline font-bold text-sm uppercase">Carlos R.</div><div class="text-[10px] uppercase tracking-widest text-primary">Pro Continental Rider</div></div>
+</div>
+</div>
+<div class="glass-panel p-10 rounded-xl relative border-l-4 border-primary card-hover" data-aos="fade-up" data-aos-delay="150">
+<span class="material-symbols-outlined text-primary text-4xl absolute top-8 right-8 opacity-20">format_quote</span>
+<p class="text-xl italic text-on-surface-variant mb-8 leading-relaxed">"Después de mi cirugía, pensé que no volvería a competir. El proceso de readaptación fue impecable."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#192540] overflow-hidden"><img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIlGDJpvZu2VZ6kbrH4vp_wy2GwyzpIK67tMxVIrw-VCBs2ZVgDIKQq09vvzU7zp5ePk5eUbqf33gm19K5lIYeD9KBYXulEyCeXOO1ZiYMsBt7AenN08id3ioJQ-HDPUyqMkYQcGaYIcMQrer3sSw-L9uT5kjovKy_7mdWCGqnMDpOLURA-VS82PwRZ4zjel9AJUGhXBdOEVbuUAaYpn3CPYJu73InudLPr8P9GCfDF_OZNoMuwR7uMbSD3KbhIfB7Wb741GUZf2c" alt="Marta"/></div>
+<div class="text-left"><div class="font-headline font-bold text-sm uppercase">Marta S.</div><div class="text-[10px] uppercase tracking-widest text-primary">Triatleta de Elite</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-24 bg-[#091328]">
+<div class="container mx-auto px-6 md:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 glass-panel rounded-2xl overflow-hidden" data-aos="fade-up">
+<div class="p-8 md:p-12">
+<h2 class="text-3xl font-headline font-bold uppercase mb-8">Performance Center</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">location_on</span><div><div class="font-bold uppercase text-xs tracking-widest mb-1">Dirección</div><p class="text-on-surface-variant">Puiana Kalea, 27<br/>20305 Irun, Gipuzkoa</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">call</span><div><div class="font-bold uppercase text-xs tracking-widest mb-1">Contacto</div><p class="text-on-surface-variant">+34 943 00 00 00<br/>info@veloperformance.com</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">schedule</span><div><div class="font-bold uppercase text-xs tracking-widest mb-1">Horario</div><p class="text-on-surface-variant">Lunes - Viernes: 08:00 - 20:00<br/>Sábados: Cita previa</p></div></div>
+</div>
+<button class="mt-12 primary-gradient w-full py-4 rounded-lg font-headline font-bold uppercase tracking-widest hover:scale-[1.02] transition-transform">Solicitar Cita Online</button>
+</div>
+<div class="h-[300px] lg:h-auto relative bg-[#192540]">
+<div class="absolute inset-0 grayscale opacity-40 hover:opacity-100 transition-opacity"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD-o7dmXSop1mpqW7hrFpNDoFaaxQS7gcufeoYJKf5FPb8msUnLUVc6oNiJAx50_E90So-s3wkkkv06Mmd0UPUB92EOibwgMTPd9GD5kVeRJ1jdOIbal6OiKhoLyewNLYaOmahsWlBeRHC3KYsm5rM03STu5P765_rFD_MMhAfb4mP1NIY6lhjIXRxLVql5E9RAYsDYSkXYOzQQGx67LZQ_1tvy4ObUdwURHJ2jpg7cUlpidaKPLg0wTvlWvSOEdycu7S8SIphAYc" alt="Map"/></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><div class="w-12 h-12 bg-primary rounded-full animate-pulse flex items-center justify-center"><div class="w-4 h-4 bg-on-primary rounded-full"></div></div></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="w-full border-t border-[#192540] bg-[#060e20]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 md:px-12 py-16 w-full">
+<div class="space-y-4"><div class="font-headline text-lg font-bold">VELO PERFORMANCE LAB</div><p class="text-sm tracking-wide opacity-60">Elite Sports Science & Biomechanics Center led by Urko Landa.</p></div>
+<div class="flex flex-col gap-2"><a class="opacity-60 hover:text-primary hover:opacity-100 transition-all text-sm" href="#">Instagram</a><a class="opacity-60 hover:text-primary hover:opacity-100 transition-all text-sm" href="#">Facebook</a></div>
+<div class="space-y-2 text-right md:text-left"><p class="text-sm opacity-60">Puiana Kalea, 27, Irun</p><p class="text-sm opacity-60">+34 943 00 00 00</p><p class="mt-8 text-xs opacity-60">© 2024 VELO PERFORMANCE LAB. ALL RIGHTS RESERVED.</p></div>
+</div>
+</footer>
+
+<script>
+AOS.init({once:true,duration:700,easing:'ease-out-cubic'});
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+document.getElementById('menuBtn')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.add('open')});
+document.getElementById('closeMenu')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.remove('open')});
+document.querySelectorAll('#mobileMenu a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'))});
+const counters=document.querySelectorAll('.counter');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.target;let c=0;const inc=t/60;const timer=setInterval(()=>{c+=inc;if(c>=t){c=t;clearInterval(timer)}e.target.textContent=Math.floor(c)},25);obs.unobserve(e.target)}})},{threshold:0.5});
+counters.forEach(c=>obs.observe(c));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body></html>

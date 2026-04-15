@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clínica Dental Errazkin | Excelencia que se siente</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#006565","primary-container":"#008080","on-primary":"#ffffff","secondary":"#5d5f5b","tertiary":"#735c00","tertiary-container":"#cca830","surface":"#f9f9f7","surface-container":"#eeeeec","surface-container-low":"#f4f4f2","surface-container-high":"#e8e8e6","surface-container-highest":"#e2e3e1","surface-container-lowest":"#ffffff","on-surface":"#1a1c1b","on-surface-variant":"#3e4949","primary-fixed":"#93f2f2","primary-fixed-dim":"#76d6d5","outline-variant":"#bdc9c8","outline":"#6e7979","tertiary-fixed":"#ffe088","secondary-container":"#e0e0db"},fontFamily:{headline:["Noto Serif","serif"],body:["Manrope","sans-serif"],label:["Manrope","sans-serif"]}}}}
+</script>
+<style>
+body{font-family:'Manrope',sans-serif;background:#f9f9f7;color:#1a1c1b;scroll-behavior:smooth}
+html{scroll-behavior:smooth}
+h1,h2,h3{font-family:'Noto Serif',serif}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
+.glass-nav{background:rgba(255,255,255,0.8);backdrop-filter:blur(20px)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(0,101,101,0.3)}50%{box-shadow:0 0 20px 5px rgba(0,101,101,0.1)}}
+@keyframes scroll-down{0%{opacity:0;transform:translateY(-8px)}50%{opacity:1}100%{opacity:0;transform:translateY(8px)}}
+.float-anim{animation:float 6s ease-in-out infinite}
+.pulse-glow{animation:pulse-glow 3s ease-in-out infinite}
+.scroll-indicator{animation:scroll-down 2s ease-in-out infinite}
+.card-hover{transition:all .5s cubic-bezier(.23,1,.32,1)}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 60px -12px rgba(0,101,101,0.12)}
+.nav-scrolled{background:rgba(255,255,255,0.95)!important;box-shadow:0 4px 20px rgba(0,0,0,0.08)!important}
+.mobile-menu{transform:translateX(100%);transition:transform .3s ease}
+.mobile-menu.open{transform:translateX(0)}
+.editorial-offset{padding-left:clamp(1rem,8vw,12rem)}
+</style>
+</head>
+<body class="bg-surface overflow-x-hidden selection:bg-primary-fixed selection:text-on-surface">
+<nav id="mainNav" class="fixed top-0 w-full z-50 glass-nav shadow-sm transition-all duration-500">
+<div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
+<span class="font-serif text-2xl font-bold text-teal-900">Errazkin</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif text-lg tracking-tight text-teal-700 border-b-2 border-teal-600 hover:text-teal-500 transition-colors" href="#servicios">Services</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 hover:text-teal-500 transition-colors" href="#tech">Technology</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 hover:text-teal-500 transition-colors" href="#contacto">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full font-label text-sm uppercase tracking-widest font-semibold hover:scale-105 transition-all active:scale-95">Book Appointment</button>
+<button id="menuBtn" class="md:hidden p-2 text-primary"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</nav>
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-3/4 h-full bg-white z-[60] shadow-2xl p-8 flex flex-col gap-6">
+<button id="closeMenu" class="self-end"><span class="material-symbols-outlined text-3xl text-primary">close</span></button>
+<a class="text-lg font-bold text-primary font-serif" href="#servicios">Services</a>
+<a class="text-lg text-stone-600 font-serif" href="#tech">Technology</a>
+<a class="text-lg text-stone-600 font-serif" href="#contacto">Contact</a>
+</div>
+
+<main class="pt-20">
+<!-- Hero -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-surface">
+<div class="container mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="max-w-2xl space-y-8" data-aos="fade-right" data-aos-duration="1000">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-tertiary-fixed text-tertiary rounded-full"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span><span class="text-xs font-bold uppercase tracking-widest">Excelencia Dental</span></div>
+<h1 class="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tight">Excelencia que <br/><span class="italic font-normal">se siente</span>.</h1>
+<p class="text-lg text-on-surface-variant max-w-lg font-light leading-relaxed" data-aos="fade-up" data-aos-delay="200">En Clínica Dental José Miguel Errazkin, transformamos la precisión clínica en una experiencia de bienestar.</p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4" data-aos="fade-up" data-aos-delay="400">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest font-bold shadow-xl hover:translate-y-[-2px] hover:scale-105 transition-all">Reserva tu Consulta</button>
+<button class="group flex items-center gap-2 px-8 py-4 text-tertiary font-bold text-sm uppercase tracking-widest"><span>Conócenos</span><div class="h-[2px] w-8 bg-tertiary-container group-hover:w-12 transition-all"></div></button>
+</div>
+</div>
+<div class="relative" data-aos="fade-left" data-aos-delay="300">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative z-10"><img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdYLdudv8qgqJ_wS5cnSC72fqaL7yiasZWuAN_Q2eGhKHntwa4npOxfi4V2NcDZp7z-0M84MBs2Ad8Hf-S9ze3pl92EfZekQVgas2I97N4gGR0ynXsHcE5ebPIxWO4oRnoHAFPwvkIWy-ngT0xQ8Q5nTiUlCuyS6pR9Tvmarf77noz-jIm14zV2ucMXNwFdkJ4pwX5OCh6_XmLpb2wmBcznfg4INgpYgM_AXo6Ld2j6RQlUBh8dZVwKJTZTAQQbwZV_jLGCQDBMPo" alt="Dr. Errazkin"/></div>
+<div class="absolute -bottom-8 -left-8 md:-left-16 bg-surface-container-lowest p-6 rounded-xl shadow-xl z-20 max-w-xs float-anim pulse-glow" data-aos="zoom-in" data-aos-delay="800">
+<div class="flex items-center gap-4 mb-3"><div class="w-12 h-12 rounded-full bg-primary-fixed-dim flex items-center justify-center"><span class="material-symbols-outlined text-primary">verified_user</span></div><div><h4 class="font-bold text-on-surface">Dr. Errazkin</h4><p class="text-xs text-on-surface-variant uppercase tracking-tighter">Especialista Senior</p></div></div>
+<p class="text-sm text-on-surface-variant leading-snug">"Nuestra prioridad es que cada paciente se sienta en calma y confianza."</p>
+</div>
+</div>
+</div>
+<div class="absolute top-1/4 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-0"></div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"><span class="text-xs text-on-surface-variant uppercase tracking-widest">Scroll</span><span class="material-symbols-outlined text-primary scroll-indicator">expand_more</span></div>
+</section>
+
+<!-- Nueva Etapa -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-4xl mx-auto px-6 md:px-8 text-center space-y-8" data-aos="fade-up">
+<h2 class="font-headline text-3xl md:text-5xl text-on-surface">Nuestra Nueva Etapa</h2>
+<div class="h-1 w-24 bg-tertiary-container mx-auto"></div>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed">Evolucionamos para ofrecerte una odontología más humana. Hemos renovado nuestro compromiso con la <span class="text-primary font-semibold">transparencia</span>.</p>
+</div>
+</section>
+
+<!-- Services -->
+<section id="servicios" class="py-32 px-6 md:px-8 container mx-auto">
+<div class="mb-16 editorial-offset" data-aos="fade-up"><span class="text-tertiary font-bold uppercase tracking-[0.2em] text-sm">Especialidades</span><h2 class="font-headline text-4xl md:text-6xl text-primary mt-2">Cuidado Integral de Autor</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[24rem]">
+<div class="md:col-span-8 card-hover bg-surface-container-lowest rounded-[2rem] p-10 flex flex-col justify-between group hover:bg-primary transition-colors duration-500 overflow-hidden relative shadow-sm" data-aos="fade-up">
+<div class="z-10"><span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary mb-6 block transition-colors">architecture</span><h3 class="font-headline text-3xl text-on-surface group-hover:text-on-primary transition-colors mb-4">Implantes Dentales</h3><p class="max-w-md text-on-surface-variant group-hover:text-on-primary/80 transition-colors leading-relaxed">Recupera la funcionalidad y estética natural con técnicas de mínima invasión.</p></div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNZN3uvPVztRkaRuy7Eybasod_dyVNzH1J4RMDOQykmSX7ORHwp5eVb8ihyhj_a8hvwnZQclCx7yECjQgqwnSREw_gQD8Sc7nHBFoR4WEEww-KsVhuNr9t88QTV3AYNH_aj0frTVzeXc3yN4gfiqRw1fdlfF-jp8PDxFMGPMQuP7PiNZY7l1TlQV7c77R_gvXvWw5AAojPFQLO3kf1exmyDlO3DabAwGxV2w59Z7xTrF-CzcvLM3Zr_MTiCVOiEKlxSNdzZCU8axw" alt="Implant"/></div>
+</div>
+<div class="md:col-span-4 card-hover bg-surface-container-low rounded-[2rem] p-10 flex flex-col justify-between shadow-sm" data-aos="fade-up" data-aos-delay="100"><div><span class="material-symbols-outlined text-4xl text-primary mb-6 block">orthopedics</span><h3 class="font-headline text-2xl text-on-surface mb-4">Ortodoncia Invisible</h3><p class="text-on-surface-variant text-sm leading-relaxed">Alinea tu sonrisa de forma discreta con tecnología 3D.</p></div><button class="text-tertiary font-bold text-xs uppercase tracking-widest border-b-2 border-tertiary-container w-max pb-1">Ver más</button></div>
+<div class="md:col-span-4 card-hover bg-surface-container-low rounded-[2rem] p-10 flex flex-col justify-between shadow-sm" data-aos="fade-up" data-aos-delay="100"><div><span class="material-symbols-outlined text-4xl text-primary mb-6 block">auto_awesome</span><h3 class="font-headline text-2xl text-on-surface mb-4">Estética Dental</h3><p class="text-on-surface-variant text-sm leading-relaxed">Diseño de sonrisa artesanal. Carillas y blanqueamientos.</p></div><button class="text-tertiary font-bold text-xs uppercase tracking-widest border-b-2 border-tertiary-container w-max pb-1">Ver más</button></div>
+<div class="md:col-span-8 card-hover bg-surface-container-lowest rounded-[2rem] p-10 flex flex-col justify-between group hover:bg-surface-container-high transition-colors shadow-sm overflow-hidden relative" data-aos="fade-up"><div class="z-10"><span class="material-symbols-outlined text-4xl text-primary mb-6 block">health_and_safety</span><h3 class="font-headline text-3xl text-on-surface mb-4">Odontología General</h3><p class="max-w-md text-on-surface-variant leading-relaxed">Prevención y mantenimiento continuo para toda la familia.</p></div><div class="absolute right-12 bottom-12 opacity-50 group-hover:scale-110 transition-transform duration-700"><span class="material-symbols-outlined text-[12rem] text-primary-fixed-dim">dentistry</span></div></div>
+</div>
+</section>
+
+<!-- Technology -->
+<section id="tech" class="py-32 bg-on-surface text-on-primary overflow-hidden relative">
+<div class="container mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative" data-aos="fade-right"><div class="rounded-[2rem] overflow-hidden border border-white/10"><img class="w-full aspect-square object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4lsis0R4ZRLE2Y2NCJHcNnLDIM5j5Tt1ra4zs0CH3DrL2BCGxyb0UfS5p9AzH4gej1TEU2GPZhocuRCW1mJjfD-J_Oc_nqLF4rI_e05GGlG-pDSQaxURh8nnz8g_hRlCwEjhKxUCeLjKgNpsi_GRsQlQMR8Ljcelkv7GMKBPrYS-zGHM6LzHjtFk9IeBCEDS2UtIJ4rWnIkJxvKf2UQqGneK7wS0gchFWJu9zwYJ4lu6LfYQDZpmZyHkwHtAMcqhjE0peUnpD7RE" alt="Scanner"/></div></div>
+<div class="space-y-8" data-aos="fade-left">
+<span class="text-primary-fixed-dim font-bold uppercase tracking-[0.2em] text-sm">Vanguardia Digital</span>
+<h2 class="font-headline text-4xl md:text-6xl leading-tight">Tecnología al servicio de tu tranquilidad.</h2>
+<p class="text-lg text-white/70 font-light leading-relaxed">Radiología digital 3D y escaneado intraoral para diagnósticos exactos en minutos.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary-fixed-dim mt-1">view_in_ar</span><div><h4 class="font-bold text-white">Escaneado 3D</h4><p class="text-sm text-white/50">Moldes digitales perfectos sin pastas.</p></div></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary-fixed-dim mt-1">biotech</span><div><h4 class="font-bold text-white">Diagnóstico Digital</h4><p class="text-sm text-white/50">Planificación quirúrgica guiada por ordenador.</p></div></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Human Factor -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-6 md:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-1 space-y-6" data-aos="fade-right"><h2 class="font-headline text-4xl text-primary leading-tight">El Factor <br/><span class="italic font-normal">Humano</span></h2><p class="text-on-surface-variant leading-relaxed font-light">Diseñamos un entorno donde el silencio, la atención personalizada y el seguimiento son nuestra norma.</p></div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="card-hover bg-surface-container-lowest p-10 rounded-[1.5rem] shadow-sm" data-aos="fade-up"><span class="material-symbols-outlined text-tertiary mb-6" style="font-variation-settings:'FILL' 1;">favorite</span><h4 class="font-bold text-lg mb-2">Entorno Sereno</h4><p class="text-sm text-on-surface-variant">Clínica diseñada para reducir el estrés.</p></div>
+<div class="card-hover bg-surface-container-lowest p-10 rounded-[1.5rem] shadow-sm" data-aos="fade-up" data-aos-delay="100"><span class="material-symbols-outlined text-tertiary mb-6" style="font-variation-settings:'FILL' 1;">support_agent</span><h4 class="font-bold text-lg mb-2">Seguimiento Real</h4><p class="text-sm text-on-surface-variant">Nos preocupamos por tu evolución.</p></div>
+<div class="card-hover bg-surface-container-lowest p-10 rounded-[1.5rem] shadow-sm" data-aos="fade-up" data-aos-delay="200"><span class="material-symbols-outlined text-tertiary mb-6" style="font-variation-settings:'FILL' 1;">groups</span><h4 class="font-bold text-lg mb-2">Equipo Empático</h4><p class="text-sm text-on-surface-variant">Excelencia técnica y calidad humana.</p></div>
+<div class="card-hover bg-surface-container-lowest p-10 rounded-[1.5rem] shadow-sm" data-aos="fade-up" data-aos-delay="300"><span class="material-symbols-outlined text-tertiary mb-6" style="font-variation-settings:'FILL' 1;">verified</span><h4 class="font-bold text-lg mb-2">Transparencia</h4><p class="text-sm text-on-surface-variant">Presupuestos honestos, sin sorpresas.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contacto" class="py-32 bg-surface-container-low overflow-hidden">
+<div class="container mx-auto px-6 md:px-8">
+<div class="bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-xl flex flex-col lg:flex-row" data-aos="fade-up">
+<div class="lg:w-1/2 p-8 md:p-12 lg:p-20 space-y-10">
+<div><span class="text-tertiary font-bold uppercase tracking-widest text-sm block mb-4">Ubicación</span><h2 class="font-headline text-4xl text-on-surface mb-4">Te esperamos.</h2><p class="text-on-surface-variant flex items-center gap-3"><span class="material-symbols-outlined text-primary">location_on</span>Francisco de Gainza Kalea, 1</p></div>
+<div class="space-y-6">
+<a class="flex items-center gap-6 p-6 rounded-2xl bg-surface-container hover:bg-primary-fixed-dim transition-colors group" href="tel:+34943000000"><span class="material-symbols-outlined text-3xl text-primary">call</span><div><span class="block text-xs uppercase font-bold text-on-surface-variant">Llámanos</span><span class="text-xl font-bold text-on-surface">943 00 00 00</span></div></a>
+<a class="flex items-center gap-6 p-6 rounded-2xl bg-surface-container hover:bg-green-100 transition-colors group" href="https://wa.me/34000000000"><span class="material-symbols-outlined text-3xl text-green-700">chat</span><div><span class="block text-xs uppercase font-bold text-on-surface-variant">WhatsApp</span><span class="text-xl font-bold text-on-surface">Escríbenos ahora</span></div></a>
+</div>
+</div>
+<div class="lg:w-1/2 min-h-[400px] relative grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1fnXjFclFU5IZGInGuvVNm7tQ9wXThGU6feXi_YVYqkH_oEvZndArIWmr5m2Wj-_ZDpwSy2ksAaxWruKq4FHqUegFLD1vKDuoqLWYy1bY4N6raMQdzdzJP2We0L0KkxIQJzPf1i_K1L992XlycJ7I4orqQd5zdsNacBecCMJXjm6FTPJ1UOcoNsw202sSPbmvj6_D9hEumEPW3x5_dvLHvTs-46f9eFkT0wxG4HauKWNhGZpMz56Z36Bl_Ql4uVNuqmbavW35hUc" alt="Map"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="w-full pt-16 pb-8 bg-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 md:px-12 max-w-7xl mx-auto">
+<div><span class="font-serif text-xl font-semibold text-teal-800 block mb-4">Errazkin</span><p class="text-stone-500 text-xs leading-loose">Comprometidos con tu salud dental desde la honestidad.</p></div>
+<div class="space-y-4"><h4 class="text-sm uppercase tracking-widest text-teal-900">Enlaces</h4><nav class="flex flex-col gap-2"><a class="text-stone-500 text-sm hover:text-teal-600" href="#">Privacy Policy</a><a class="text-stone-500 text-sm hover:text-teal-600" href="#">Terms of Service</a></nav></div>
+<div class="space-y-4"><h4 class="text-sm uppercase tracking-widest text-teal-900">Portal</h4><nav class="flex flex-col gap-2"><a class="text-stone-500 text-sm hover:text-teal-600" href="#">Patient Portal</a></nav></div>
+<div class="space-y-4"><h4 class="text-sm uppercase tracking-widest text-teal-900">Contacto</h4><p class="text-stone-500 text-sm">Francisco de Gainza, 1<br/>Gipuzkoa, España</p></div>
+</div>
+<div class="mt-16 px-8 md:px-12 max-w-7xl mx-auto border-t border-stone-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"><p class="text-sm uppercase tracking-widest text-stone-500">© 2024 Clínica Dental Errazkin.</p></div>
+</footer>
+
+<button class="fixed bottom-8 right-8 md:hidden bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center z-[100]"><span class="material-symbols-outlined">calendar_month</span></button>
+
+<script>
+AOS.init({once:true,duration:700,easing:'ease-out-cubic'});
+const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+document.getElementById('menuBtn')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.add('open')});
+document.getElementById('closeMenu')?.addEventListener('click',()=>{document.getElementById('mobileMenu').classList.remove('open')});
+document.querySelectorAll('#mobileMenu a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'))});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body></html>
