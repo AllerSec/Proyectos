@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Clínica Dental Cadillón en Irún. Arquitectura oral de precisión. Implantes, estética dental y rehabilitación oral con tecnología de vanguardia."/>
+<title>Clínica Dental Cadillón | Arquitectura Oral de Precisión · Irún</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f8f9fa; --surface:#f8f9fa; --on-surface:#191c1d; --primary:#0f1c2c;
+  --primary-container:#0f1c2c; --on-primary:#fff; --on-surface-variant:#44474c;
+  --outline-variant:#c4c6cc; --surface-container-low:#f3f4f5; --surface-container:#edeeef;
+  --surface-container-high:#e7e8e9; --surface-container-lowest:#fff; --surface-variant:#e1e3e4;
+  --on-primary-container:#778598; --secondary:#585f64;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--on-surface);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,select,textarea{font-family:inherit}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;vertical-align:middle}
+.headline{font-family:'Newsreader',serif}
+.container{max-width:1520px;margin:0 auto;padding:0 3rem}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(248,249,250,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:all .4s}
+nav.scrolled{box-shadow:0 6px 20px rgba(25,28,29,.04)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1520px;margin:0 auto;padding:1.2rem 3rem}
+.nav-logo{display:flex;align-items:center;gap:.8rem;font-family:'Newsreader',serif;font-style:italic;font-size:1.5rem;color:var(--on-surface);letter-spacing:-.02em}
+.nav-logo .logo-mark{width:46px;height:46px;background:var(--primary);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-style:italic;font-size:1.2rem;font-weight:400;letter-spacing:-.02em;box-shadow:0 6px 18px rgba(15,28,44,.22)}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{font-family:'Newsreader',serif;font-size:1.05rem;color:#555c68;font-weight:300;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--primary);transition:width .4s}
+.nav-links a:hover{color:var(--on-surface)}
+.nav-links a:hover::after{width:100%}
+.btn-primary{background:var(--primary);color:#fff;padding:.95rem 2rem;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:opacity .3s,transform .2s}
+.btn-primary:hover{opacity:.85;transform:translateY(-2px)}
+.btn-primary:active{transform:scale(.97)}
+.mobile-toggle{display:none;font-size:1.8rem;color:var(--primary)}
+
+/* HERO */
+header.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:6rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.92) saturate(.85);animation:slowZoom 24s ease-in-out infinite alternate}
+@keyframes slowZoom{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(248,249,250,.4) 40%,transparent 80%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1520px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(12,1fr)}
+.hero-inner{grid-column:1/span 8;animation:fadeInUp 1.2s cubic-bezier(.2,.8,.2,1) both}
+.hero-eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--on-primary-container);margin-bottom:2rem;display:inline-block;font-weight:500}
+.hero h1{font-family:'Newsreader',serif;font-size:clamp(3rem,9vw,8rem);line-height:.9;letter-spacing:-.035em;color:var(--primary-container);margin-bottom:2rem;font-weight:400}
+.hero h1 .italic{font-style:italic}
+.hero p.lead{font-size:1.2rem;color:var(--on-surface-variant);max-width:580px;line-height:1.65;font-weight:300;margin-bottom:3rem}
+.hero-cta{display:flex;gap:1.5rem;flex-wrap:wrap}
+.hero-cta .btn-main{background:var(--primary);color:#fff;padding:1.15rem 2.5rem;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:all .3s;box-shadow:0 10px 30px rgba(15,28,44,.2)}
+.hero-cta .btn-main:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(15,28,44,.32)}
+.hero-cta .btn-ghost{color:var(--primary-container);padding:1.15rem 0;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--primary-container);transition:opacity .3s}
+.hero-cta .btn-ghost:hover{opacity:.7}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+/* PHILOSOPHY */
+section.philo{padding:8rem 0;background:var(--surface)}
+.philo-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1520px;margin:0 auto;padding:0 3rem}
+.philo-img{position:relative}
+.philo-img .offset{position:absolute;top:-3rem;left:-3rem;width:16rem;height:16rem;background:var(--surface-container-low);z-index:-1;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.philo-img:hover .offset{transform:translate(1rem,1rem)}
+.philo-img img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.philo-text .eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--on-primary-container);margin-bottom:1.5rem;display:block;font-weight:500}
+.philo-text h2{font-family:'Newsreader',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:400;line-height:1.1;color:var(--primary-container);letter-spacing:-.02em;margin-bottom:2.5rem}
+.philo-text h2 .italic{font-style:italic;font-weight:300}
+.philo-text .body{font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--on-surface-variant);line-height:1.7;font-weight:300;margin-bottom:1.5rem}
+.philo-stats{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.philo-stats .num{font-family:'Newsreader',serif;font-style:italic;font-size:2.8rem;color:var(--primary-container);margin-bottom:.5rem;display:block;font-weight:400}
+.philo-stats .lbl{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--on-surface-variant);font-weight:500}
+
+/* SERVICES BENTO */
+section.services{padding:8rem 0;background:var(--surface-container-low)}
+.services-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:5rem;gap:2rem;flex-wrap:wrap;max-width:1520px;margin-left:auto;margin-right:auto;padding:0 3rem}
+.services-head .eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--on-primary-container);margin-bottom:1.5rem;display:block;font-weight:500}
+.services-head h2{font-family:'Newsreader',serif;font-size:clamp(2rem,5vw,4rem);color:var(--primary-container);font-weight:400;letter-spacing:-.02em}
+.services-head p{color:var(--on-surface-variant);max-width:320px;font-weight:300;font-size:1.05rem}
+.bento{max-width:1520px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem}
+.b-card{padding:3rem;min-height:440px;transition:transform .5s}
+.b-card:hover{transform:translateY(-4px)}
+.b-card .material-symbols-outlined{font-size:2.4rem;color:var(--on-primary-container);margin-bottom:2rem;display:block}
+.b-card h3{font-family:'Newsreader',serif;font-size:2.3rem;color:var(--primary-container);margin-bottom:1rem;font-weight:400;letter-spacing:-.02em;line-height:1.1}
+.b-card p{color:var(--on-surface-variant);font-weight:300;line-height:1.65}
+.b-card .link{margin-top:auto;color:var(--on-primary-container);font-size:.65rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;border-bottom:1px solid rgba(119,133,152,.3);padding-bottom:.5rem;display:inline-block;align-self:flex-start;margin-top:2rem;transition:color .3s}
+.b-card .link:hover{color:var(--primary-container)}
+.b-implants{grid-column:span 8;background:var(--surface-container-lowest);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.b-implants .content{position:relative;z-index:2;max-width:420px}
+.b-implants img.bg{position:absolute;right:-5%;bottom:-5%;width:55%;height:105%;object-fit:cover;filter:grayscale(100%);opacity:.14;transition:opacity .6s}
+.b-implants:hover img.bg{opacity:.26}
+.b-aesthetic{grid-column:span 4;background:var(--primary-container);color:#fff;display:flex;flex-direction:column}
+.b-aesthetic .material-symbols-outlined{color:#fff}
+.b-aesthetic h3{color:#fff}
+.b-aesthetic p{color:var(--on-primary-container)}
+.b-aesthetic .link{color:#fff;border-color:rgba(255,255,255,.3)}
+.b-ortho{grid-column:span 4;background:var(--surface-container-lowest);display:flex;flex-direction:column}
+.b-rehab{grid-column:span 8;background:var(--surface-container-high);display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.b-rehab .text{display:flex;flex-direction:column;justify-content:center}
+.b-rehab .photo img{width:100%;height:280px;object-fit:cover}
+
+/* TESTIMONIALS */
+section.testi{padding:8rem 0;background:var(--surface);text-align:center}
+.testi .eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--on-primary-container);margin-bottom:2rem;display:block;font-weight:500}
+.testi h2{font-family:'Newsreader',serif;font-size:clamp(2.2rem,6vw,4.5rem);color:var(--primary-container);font-weight:400;letter-spacing:-.02em;margin-bottom:5rem}
+.testi-grid{max-width:1520px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;text-align:left}
+.q-card{padding:2.5rem;background:rgba(243,244,245,.4);transition:background .5s,transform .4s}
+.q-card:hover{background:var(--surface-container-low);transform:translateY(-6px)}
+.q-card .mark{color:var(--on-primary-container);font-size:2rem;margin-bottom:1.2rem;display:block}
+.q-card .quote{font-family:'Manrope',sans-serif;font-style:italic;font-weight:300;font-size:1.15rem;line-height:1.55;color:var(--on-surface);margin-bottom:2rem}
+.q-card .author{padding-top:2rem;border-top:1px solid rgba(196,198,204,.3)}
+.q-card h4{font-family:'Newsreader',serif;font-size:1.5rem;color:var(--primary-container);font-weight:400;margin-bottom:.3rem}
+.q-card .role{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--on-surface-variant)}
+
+/* CONTACT */
+section.contact{padding:8rem 0;background:var(--surface-container-low)}
+.contact-grid{max-width:1520px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem}
+.c-left .eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--on-primary-container);margin-bottom:2rem;display:block;font-weight:500}
+.c-left h2{font-family:'Newsreader',serif;font-size:clamp(2rem,4.5vw,3.5rem);color:var(--primary-container);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:3rem}
+.c-item{display:flex;gap:1.5rem;margin-bottom:2.5rem;align-items:flex-start}
+.c-item .material-symbols-outlined{font-size:1.7rem;color:var(--on-primary-container);margin-top:.3rem}
+.c-item h4{font-family:'Newsreader',serif;font-size:1.4rem;color:var(--primary-container);margin-bottom:.5rem;font-weight:400}
+.c-item p,.c-item a{font-size:1.05rem;color:var(--on-surface-variant);font-weight:300;line-height:1.5;transition:color .3s}
+.c-item a:hover{color:var(--primary-container)}
+.c-map{width:100%;aspect-ratio:16/9;overflow:hidden;margin-top:1rem}
+.c-map iframe{width:100%;height:100%;border:0;filter:grayscale(60%) brightness(.95);transition:filter 1s}
+.c-map:hover iframe{filter:grayscale(0) brightness(1)}
+.c-right{background:var(--surface-container-lowest);padding:3.5rem;display:flex;flex-direction:column;justify-content:center}
+.c-right h3{font-family:'Newsreader',serif;font-size:2rem;color:var(--primary-container);margin-bottom:3rem;font-weight:400;letter-spacing:-.02em}
+form{display:flex;flex-direction:column;gap:2.5rem}
+.field{position:relative;border-bottom:1px solid var(--outline-variant);transition:border-color .3s}
+.field:focus-within{border-color:var(--primary-container)}
+.field label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--on-surface-variant);margin-bottom:.5rem;display:block;font-weight:500}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:none;outline:none;padding:0 0 1rem;color:var(--primary-container);font-weight:300;font-size:1rem;resize:none}
+.field select{appearance:none;cursor:pointer}
+.submit-btn{width:100%;background:var(--primary-container);color:#fff;padding:1.5rem;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;font-weight:500;transition:opacity .3s,transform .2s}
+.submit-btn:hover{opacity:.85;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--surface-container);padding:4rem 3rem 2rem}
+.footer-grid{max-width:1520px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem}
+.footer-brand{font-family:'Newsreader',serif;font-style:italic;font-size:1.8rem;color:var(--primary-container);margin-bottom:1.5rem;display:block;letter-spacing:-.02em}
+.footer-grid p{color:var(--on-surface-variant);font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;max-width:320px;font-weight:500;line-height:1.8}
+.footer-col h5{font-size:.65rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;color:var(--primary-container);margin-bottom:1.5rem}
+.footer-col a{display:block;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--on-surface-variant);padding:.4rem 0;font-weight:500;transition:color .3s}
+.footer-col a:hover{color:var(--primary-container);text-decoration:underline;text-underline-offset:4px}
+.footer-base{max-width:1520px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid var(--outline-variant);text-align:center;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--on-surface-variant);font-weight:500}
+
+/* WA */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:40;background:#25d366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 14px 36px rgba(37,211,102,.45);transition:transform .3s;animation:pulseWa 2.5s infinite}
+@keyframes pulseWa{0%{box-shadow:0 14px 36px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 14px 36px rgba(37,211,102,.45),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 14px 36px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .container,.hero-content,.services-head,.bento,.testi-grid,.contact-grid,.philo-grid,.nav-inner,footer,.footer-grid{padding-left:2rem;padding-right:2rem}
+  nav .nav-inner{padding:1rem 2rem}
+  .philo-grid,.hero-content,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .hero-inner{grid-column:1}
+  .bento{grid-template-columns:repeat(4,1fr)}
+  .b-implants,.b-rehab{grid-column:span 4}
+  .b-aesthetic,.b-ortho{grid-column:span 2}
+  .b-rehab{grid-template-columns:1fr}
+  .b-rehab .photo img{height:220px}
+  .testi-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+  section.philo,section.services,section.testi,section.contact{padding:5rem 0}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn-main{text-align:center}
+  .bento{grid-template-columns:1fr}
+  .b-implants,.b-rehab,.b-aesthetic,.b-ortho{grid-column:span 1}
+  .b-card{padding:2rem;min-height:340px}
+  .philo-img .offset{top:-1.5rem;left:-1.5rem;width:9rem;height:9rem}
+  .c-right{padding:2rem}
+  .footer-grid{grid-template-columns:1fr}
+  nav .btn-primary{padding:.6rem 1.1rem;font-size:.65rem}
+}
+@media(max-width:480px){
+  .container,.hero-content,.services-head,.bento,.testi-grid,.contact-grid,.philo-grid,.nav-inner,footer,.footer-grid{padding-left:1.2rem;padding-right:1.2rem}
+  nav .nav-inner{padding:.9rem 1.2rem}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark">C</div>
+      <span>Cadillón</span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Tratamientos</a>
+      <a href="#philo">Filosofía</a>
+      <a href="#testi">Pacientes</a>
+      <a href="#contact">Contacto</a>
+    </div>
+    <a href="tel:+34943619848" class="btn-primary">Agendar Cita</a>
+    <span class="material-symbols-outlined mobile-toggle">menu</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80" alt="Interior minimalista clínica dental"/>
+  </div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Estándar de Excelencia</span>
+      <h1>Excelencia<br/><span class="italic">Arquitectónica</span><br/>Dental</h1>
+      <p class="lead">Diseñamos sonrisas con la precisión de un arquitecto y la sensibilidad de un artista. En Clínica Dental Cadillón, la salud bucodental trasciende la clínica tradicional.</p>
+      <div class="hero-cta">
+        <a href="#services" class="btn-main">Nuestros Servicios</a>
+        <a href="#philo" class="btn-ghost">Nuestra Filosofía</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="philo" id="philo">
+  <div class="philo-grid">
+    <div class="philo-img reveal">
+      <div class="offset"></div>
+      <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80" alt="Profesional dental"/>
+    </div>
+    <div class="philo-text reveal">
+      <span class="eyebrow">Manifiesto</span>
+      <h2>Rigor Científico,<br/><span class="italic">Alma de Artista</span></h2>
+      <p class="body">Liderada por Candy, nuestro equipo entiende que cada paciente es un proyecto único de restauración y estética. No solo tratamos dientes; rehabilitamos la confianza a través de la precisión técnica.</p>
+      <p class="body">En el corazón de Irun, hemos creado un santuario de calma donde la tecnología de vanguardia se encuentra con una cercanía humana genuina. Nuestra práctica se basa en la honestidad diagnóstica y la excelencia en la ejecución.</p>
+      <div class="philo-stats">
+        <div>
+          <span class="num">+20</span>
+          <span class="lbl">Años de Trayectoria</span>
+        </div>
+        <div>
+          <span class="num">5k+</span>
+          <span class="lbl">Vidas Transformadas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="services-head reveal">
+    <div>
+      <span class="eyebrow">Especialidades</span>
+      <h2>Servicios de Precisión</h2>
+    </div>
+    <p>Exploramos el equilibrio perfecto entre funcionalidad biológica y estética dental de alto nivel.</p>
+  </div>
+  <div class="bento">
+    <div class="b-card b-implants reveal">
+      <img class="bg" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=80" alt=""/>
+      <div class="content" style="display:flex;flex-direction:column;height:100%">
+        <span class="material-symbols-outlined">settings_backup_restore</span>
+        <h3>Implantes Dentales</h3>
+        <p>Restauración estructural mediante técnicas de cirugía guiada mínimamente invasiva. Soluciones definitivas con materiales biocompatibles de primera calidad.</p>
+        <a href="#contact" class="link">Solicitar Info</a>
+      </div>
+    </div>
+    <div class="b-card b-aesthetic reveal">
+      <span class="material-symbols-outlined">auto_awesome</span>
+      <h3>Estética Dental</h3>
+      <p>Diseño de sonrisa personalizado: carillas de porcelana ultra-finas y blanqueamientos avanzados.</p>
+      <a href="#contact" class="link">Ver Procedimientos</a>
+    </div>
+    <div class="b-card b-ortho reveal">
+      <span class="material-symbols-outlined">architecture</span>
+      <h3>Ortodoncia</h3>
+      <p>Alineación invisible y sistemas avanzados para una oclusión perfecta y estética funcional.</p>
+      <a href="#contact" class="link">Ver Opciones</a>
+    </div>
+    <div class="b-card b-rehab reveal">
+      <div class="text">
+        <span class="material-symbols-outlined">health_and_safety</span>
+        <h3>Rehabilitación Oral</h3>
+        <p>Casos complejos resueltos con un enfoque multidisciplinar. Recuperamos la funcionalidad total de su boca.</p>
+      </div>
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80" alt="Detalle clínico"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="testi">
+  <span class="eyebrow">Pacientes</span>
+  <h2>Voces de Confianza</h2>
+  <div class="testi-grid">
+    <div class="q-card reveal">
+      <span class="material-symbols-outlined mark">format_quote</span>
+      <p class="quote">"La atención al detalle en Cadillón es algo que no había experimentado nunca. Me sentí como si estuvieran diseñando una obra de arte, no solo reparando un diente."</p>
+      <div class="author">
+        <h4>Adriana Barrios</h4>
+        <span class="role">Directora Creativa</span>
+      </div>
+    </div>
+    <div class="q-card reveal">
+      <span class="material-symbols-outlined mark">format_quote</span>
+      <p class="quote">"Encontrar un equipo que combine tal nivel de tecnología con un trato tan humano es excepcional. Los resultados de mi tratamiento de ortodoncia son perfectos."</p>
+      <div class="author">
+        <h4>Andrea Semper</h4>
+        <span class="role">Ingeniera</span>
+      </div>
+    </div>
+    <div class="q-card reveal">
+      <span class="material-symbols-outlined mark">format_quote</span>
+      <p class="quote">"Total transparencia desde el primer diagnóstico. Candy te explica cada paso con una claridad asombrosa. Es mi clínica de confianza absoluta."</p>
+      <div class="author">
+        <h4>Nekane Achucarro</h4>
+        <span class="role">Empresaria</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="c-left reveal">
+      <span class="eyebrow">Presencia</span>
+      <h2>Estamos en el Corazón de Irun</h2>
+      <div class="c-item">
+        <span class="material-symbols-outlined">location_on</span>
+        <div>
+          <h4>Dirección Principal</h4>
+          <p>Aduana 2, 1º 4ª<br/>20301 Irun, Gipuzkoa</p>
+        </div>
+      </div>
+      <div class="c-item">
+        <span class="material-symbols-outlined">schedule</span>
+        <div>
+          <h4>Horario Clínico</h4>
+          <p>Lunes — Viernes: 09:00 - 14:00, 15:00 - 18:00<br/>Sábados: Bajo cita previa</p>
+        </div>
+      </div>
+      <div class="c-item">
+        <span class="material-symbols-outlined">call</span>
+        <div>
+          <h4>Contacto Directo</h4>
+          <a href="tel:+34943619848">+34 943 619 848</a><br/>
+          <a href="mailto:clinicadentalcadillon@gmail.com">clinicadentalcadillon@gmail.com</a>
+        </div>
+      </div>
+      <div class="c-map">
+        <iframe src="https://www.google.com/maps?q=Aduana+2+Irun&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="c-right reveal">
+      <h3>Solicite una Evaluación Especializada</h3>
+      <form onsubmit="event.preventDefault();alert('Gracias por contactar con Clínica Dental Cadillón. Te responderemos en 24h.');this.reset();">
+        <div class="field">
+          <label>Nombre Completo</label>
+          <input type="text" placeholder="Escriba su nombre" required/>
+        </div>
+        <div class="field">
+          <label>Correo Electrónico</label>
+          <input type="email" placeholder="email@ejemplo.com" required/>
+        </div>
+        <div class="field">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="+34 ..."/>
+        </div>
+        <div class="field">
+          <label>Interés Clínico</label>
+          <select>
+            <option>Implantes y Cirugía</option>
+            <option>Estética y Diseño de Sonrisa</option>
+            <option>Ortodoncia Invisible</option>
+            <option>Revisión General</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Mensaje</label>
+          <textarea placeholder="Cuéntenos su caso..." rows="3"></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Enviar Solicitud</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-brand">Clínica Dental Cadillón</span>
+      <p>Arquitectura Oral de Precisión. Redefiniendo el estándar de la salud bucodental a través de la ciencia y el diseño.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#">Privacidad</a>
+      <a href="#">Términos</a>
+      <a href="#">Accesibilidad</a>
+    </div>
+    <div class="footer-col">
+      <h5>Paciente</h5>
+      <a href="#contact">Portal del Paciente</a>
+      <a href="#contact">Cita Online</a>
+    </div>
+  </div>
+  <div class="footer-base">© 2026 Clínica Dental Cadillón · Arquitectura Oral de Precisión</div>
+</footer>
+
+<a href="https://wa.me/34943619848" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

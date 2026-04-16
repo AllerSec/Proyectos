@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Clínica Dental Haginlari en Irún. Arte y ciencia dental. Implantología, estética, ortodoncia invisible. Cita: 943 617 840."/>
+<title>Clínica Dental Haginlari | Arte y Ciencia Dental · Irún</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#fcf9f2; --primary:#061b0e; --primary-container:#1b3022; --secondary:#53624f;
+  --secondary-container:#d4e5cc; --on-surface:#1c1c18; --on-surface-variant:#434843;
+  --outline-variant:#c3c8c1; --surface-container-low:#f6f3ec; --surface-container-high:#ebe8e1;
+  --secondary-fixed:#d7e7cf; --primary-fixed-dim:#b4cdb8; --on-primary-container:#819986;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--on-surface);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;selection:var(--secondary-container)}
+body::selection{background:var(--secondary-container);color:var(--primary)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;vertical-align:middle;display:inline-block}
+.headline{font-family:'Noto Serif',serif}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(252,249,242,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:all .4s}
+nav.scrolled{box-shadow:0 6px 20px rgba(28,28,24,.06)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1280px;margin:0 auto;padding:1rem 2rem}
+.nav-logo{display:flex;align-items:center;gap:.8rem;font-family:'Noto Serif',serif;font-weight:700;font-size:1.3rem;color:var(--primary)}
+.nav-logo .logo-mark{width:44px;height:44px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:700;font-family:'Noto Serif',serif;box-shadow:0 6px 16px rgba(6,27,14,.25)}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{color:var(--on-surface-variant);font-weight:500;font-size:.95rem;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:width .4s}
+.nav-links a:hover{color:var(--primary)}
+.nav-links a:hover::after{width:100%}
+.btn-primary{background:var(--primary);color:#fff;padding:.85rem 1.8rem;border-radius:6px;font-weight:700;font-size:.85rem;transition:transform .2s,box-shadow .3s;box-shadow:0 6px 18px rgba(6,27,14,.22)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(6,27,14,.3)}
+.btn-primary:active{transform:scale(.97)}
+.mobile-toggle{display:none;font-size:1.8rem;color:var(--primary)}
+
+/* HERO */
+header.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.72);animation:slowZoom 22s ease-in-out infinite alternate}
+@keyframes slowZoom{from{transform:scale(1.05)}to{transform:scale(1.12)}}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(6,27,14,.75) 0%,rgba(6,27,14,.35) 55%,transparent 100%)}
+.hero-content{position:relative;z-index:2;padding:0 2rem;max-width:1280px;margin:0 auto;width:100%}
+.hero-inner{max-width:820px;animation:fadeInUp 1.1s cubic-bezier(.2,.8,.2,1) both}
+.hero-badge{display:inline-block;padding:.45rem 1.2rem;background:rgba(212,229,204,.15);backdrop-filter:blur(10px);color:#d7e7cf;font-size:.72rem;letter-spacing:3px;font-weight:700;margin-bottom:1.8rem;border-left:2px solid var(--secondary-fixed)}
+.hero h1{font-family:'Noto Serif',serif;font-size:clamp(2.75rem,7.5vw,6rem);line-height:.95;color:#fff;letter-spacing:-.025em;margin-bottom:2rem;font-weight:700}
+.hero h1 .italic{font-style:italic;color:var(--secondary-fixed)}
+.hero p.lead{font-size:clamp(1.1rem,1.4vw,1.35rem);color:rgba(215,231,207,.95);max-width:640px;line-height:1.55;margin-bottom:2.5rem;font-weight:300}
+.hero-cta{display:flex;gap:1.3rem;flex-wrap:wrap}
+.hero-big-btn{background:var(--bg);color:var(--primary);padding:1.15rem 2.4rem;border-radius:6px;font-weight:700;font-size:1rem;transition:transform .3s,box-shadow .3s;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.hero-big-btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
+.hero-ghost{color:#fff;padding:1.15rem 2.4rem;border:1px solid rgba(255,255,255,.3);border-radius:6px;font-weight:600;font-size:1rem;transition:all .3s}
+.hero-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.6)}
+.scroll-indicator span{font-size:.65rem;letter-spacing:3px;text-transform:uppercase}
+.scroll-indicator .line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.6),transparent);animation:scrollDown 2.2s ease-in-out infinite}
+@keyframes scrollDown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+/* DETAIL SECTION */
+section.detail{padding:8rem 0;background:var(--bg)}
+.detail-grid{display:grid;grid-template-columns:7fr 5fr;gap:4rem;align-items:center}
+.detail-img{position:relative}
+.detail-img .bg-shape{position:absolute;inset:-1.5rem;background:var(--surface-container-high);border-radius:12px;z-index:-1;transition:inset .5s}
+.detail-img:hover .bg-shape{inset:0}
+.detail-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;box-shadow:0 30px 60px rgba(6,27,14,.12)}
+.detail-text h2{font-family:'Noto Serif',serif;font-size:clamp(2rem,4.5vw,4rem);font-weight:700;line-height:1.05;color:var(--primary);margin-bottom:2rem}
+.detail-text h2 .italic{font-style:italic}
+.detail-text p.big{font-size:1.2rem;color:var(--on-surface-variant);line-height:1.6;margin-bottom:1.5rem}
+.detail-text p.small{font-size:1rem;color:rgba(67,72,67,.85);margin-bottom:2rem}
+.detail-stats{padding-top:2rem;border-top:1px solid rgba(195,200,193,.4);display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.stat{}
+.stat .num{font-family:'Noto Serif',serif;font-size:2rem;color:var(--primary);margin-bottom:.3rem;display:block}
+.stat .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--secondary);font-weight:700}
+
+/* GALLERY SERVICES */
+section.services{padding:8rem 0;background:var(--surface-container-low);overflow:hidden}
+.services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+.services-head h2{font-family:'Noto Serif',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:700;color:var(--primary);line-height:1.05;max-width:580px}
+.services-head h2 .italic{font-style:italic}
+.services-head p{color:var(--on-surface-variant);max-width:480px;font-size:1.05rem}
+.gallery{display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:2rem;scroll-snap-type:x mandatory}
+.gallery-card{flex:none;width:min(380px,85vw);scroll-snap-align:start}
+.gallery-card .inner{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:3/4;cursor:pointer}
+.gallery-card .inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.gallery-card:hover .inner img{transform:scale(1.08)}
+.gallery-card .inner::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--primary) 0%,transparent 55%);opacity:.7;transition:opacity .4s}
+.gallery-card:hover .inner::after{opacity:.85}
+.gallery-card .content{position:absolute;bottom:0;left:0;right:0;padding:2.2rem;z-index:2;color:#fff}
+.gallery-card .num{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;opacity:.8;margin-bottom:.8rem;display:block}
+.gallery-card h3{font-family:'Noto Serif',serif;font-size:1.7rem;font-weight:700;margin-bottom:.7rem}
+.gallery-card .desc{font-size:.88rem;opacity:0;max-height:0;transition:all .5s}
+.gallery-card:hover .desc{opacity:1;max-height:200px}
+
+/* VOICES (testimonials dark) */
+section.voices{padding:8rem 0;background:var(--primary);color:#fff}
+.voices-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center}
+.voice{position:relative;margin-bottom:3.5rem}
+.voice:last-child{margin-bottom:0}
+.voice .quote-mark{font-size:5rem;color:var(--secondary);opacity:.3;position:absolute;top:-2rem;left:-1rem;font-family:'Noto Serif',serif;line-height:1}
+.voice blockquote{font-family:'Noto Serif',serif;font-style:italic;font-size:clamp(1.3rem,2.2vw,1.95rem);line-height:1.3;position:relative;z-index:1}
+.voice .author-row{margin-top:1.5rem;display:flex;align-items:center;gap:1rem}
+.voice .avatar{width:48px;height:48px;background:var(--secondary-container);color:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+.voice cite{font-style:normal}
+.voice cite .name{font-weight:700;font-size:1.15rem;display:block}
+.voice cite .role{font-size:.82rem;opacity:.75}
+.voices-img{position:relative;height:600px}
+.voices-img img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.voices-stat{position:absolute;bottom:-2rem;right:-2rem;width:230px;padding:2rem;background:rgba(252,249,242,.08);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.1)}
+.voices-stat .big{font-family:'Noto Serif',serif;font-size:3.2rem;color:var(--secondary-fixed);display:block;margin-bottom:.5rem}
+.voices-stat .label{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;opacity:.65}
+
+/* CONTACT */
+section.contact{padding:8rem 0;background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 2fr;gap:4rem}
+.contact-info h2{font-family:'Noto Serif',serif;font-size:clamp(2rem,4vw,3rem);color:var(--primary);font-weight:700;margin-bottom:2.5rem;line-height:1.1}
+.contact-info h2 .italic{font-style:italic}
+.contact-block{margin-bottom:2.5rem}
+.contact-block h4{font-size:.72rem;letter-spacing:3px;color:var(--secondary);font-weight:700;text-transform:uppercase;margin-bottom:.8rem}
+.contact-block p{font-size:1.15rem;color:var(--on-surface);line-height:1.5}
+.contact-block .accent{font-weight:700;color:var(--primary)}
+.contact-actions{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.contact-link{display:flex;align-items:center;gap:1rem;transition:transform .3s}
+.contact-link:hover{transform:translateX(6px)}
+.contact-link .ico{width:44px;height:44px;background:var(--secondary-container);color:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.contact-link span:last-child{font-size:1.05rem}
+.contact-map{height:620px;border-radius:6px;overflow:hidden;position:relative;box-shadow:0 30px 60px rgba(6,27,14,.12)}
+.contact-map iframe{width:100%;height:100%;border:0;filter:saturate(.85)}
+.floating-hours{position:absolute;top:2rem;left:2rem;background:#fff;padding:1.5rem 1.8rem;box-shadow:0 15px 40px rgba(0,0,0,.15);max-width:260px;border-radius:4px}
+.floating-hours .title{color:var(--primary);font-weight:700;font-size:1.1rem;margin-bottom:.5rem}
+.floating-hours .row{display:flex;justify-content:space-between;font-size:.85rem;color:var(--on-surface-variant);padding:.25rem 0}
+
+/* FINAL CTA */
+section.final-cta{padding:6rem 0;background:var(--surface-container-high);text-align:center}
+.final-cta h3{font-family:'Noto Serif',serif;font-size:clamp(2rem,4.5vw,3.8rem);color:var(--primary);font-weight:700;margin-bottom:2.5rem;line-height:1.1}
+.final-cta .btn-huge{background:var(--primary);color:#fff;padding:1.4rem 3rem;font-size:1.15rem;font-weight:700;border-radius:6px;transition:all .3s;box-shadow:0 15px 40px rgba(6,27,14,.25)}
+.final-cta .btn-huge:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(6,27,14,.4)}
+
+/* FOOTER */
+footer{background:var(--surface-container-low);padding:4rem 2rem 2rem;border-top-left-radius:28px;border-top-right-radius:28px}
+.footer-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+.footer-brand{font-family:'Noto Serif',serif;font-weight:700;font-size:1.15rem;color:var(--primary);margin-bottom:1rem}
+.footer-inner p{color:var(--on-surface-variant);font-size:.92rem;max-width:320px;line-height:1.6}
+.footer-col h5{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--primary);margin-bottom:1rem}
+.footer-col a{display:block;color:var(--on-surface-variant);font-size:.9rem;padding:.3rem 0;transition:color .3s}
+.footer-col a:hover{color:var(--primary)}
+.footer-base{max-width:1280px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(195,200,193,.4);text-align:center;color:var(--on-surface-variant);font-size:.8rem}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:40;background:#25d366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 14px 36px rgba(37,211,102,.45);transition:transform .3s;animation:pulseWa 2.5s infinite}
+@keyframes pulseWa{0%{box-shadow:0 14px 36px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 14px 36px rgba(37,211,102,.45),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 14px 36px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .detail-grid,.voices-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .voices-img{height:400px}
+  .voices-stat{right:0;bottom:-1.5rem}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+  section.detail,section.services,section.voices,section.contact{padding:5rem 0}
+  .hero-cta{flex-direction:column}
+  .hero-big-btn,.hero-ghost{width:100%;text-align:center}
+  .voices-stat{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .floating-hours{left:1rem;top:1rem;padding:1rem;font-size:.9em}
+  .contact-map{height:420px}
+  .detail-stats{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .container{padding:0 1.2rem}
+  .nav-inner{padding:.8rem 1.2rem}
+  .hero-content{padding:0 1.2rem}
+  nav .btn-primary{padding:.5rem 1rem;font-size:.75rem}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark">H</div>
+      <span>Haginlari</span>
+    </a>
+    <div class="nav-links">
+      <a href="#detail">Filosofía</a>
+      <a href="#services">Servicios</a>
+      <a href="#voices">Reseñas</a>
+      <a href="#contact">Contacto</a>
+    </div>
+    <a href="tel:+34943617840" class="btn-primary">Pedir Cita</a>
+    <span class="material-symbols-outlined mobile-toggle">menu</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80" alt="Interior clínica dental moderna"/>
+  </div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <span class="hero-badge">EL ARTE DEL BIENESTAR</span>
+      <h1>Haginlari: La Nueva Era de la Odontología en <span class="italic">Irún</span></h1>
+      <p class="lead">Donde la precisión quirúrgica se encuentra con la sensibilidad artística para redefinir el cuidado de su sonrisa.</p>
+      <div class="hero-cta">
+        <a href="#services" class="hero-big-btn">Explorar Disciplinas</a>
+        <a href="#contact" class="hero-ghost">Contactar Ahora</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Descubrir</span>
+    <div class="line"></div>
+  </div>
+</header>
+
+<section class="detail" id="detail">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-img reveal">
+        <div class="bg-shape"></div>
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=80" alt="Detalle implante dental"/>
+      </div>
+      <div class="detail-text reveal">
+        <h2>El Valor del <span class="italic">Detalle</span></h2>
+        <p class="big">No es solo odontología; es micro-arquitectura oral. Cada intervención es tratada como una obra de autor, donde la excelencia no es opcional.</p>
+        <p class="small">Mantenemos un equilibrio sofisticado entre la inversión tecnológica de vanguardia y una relación calidad-precio justa, permitiendo que la exclusividad sea, ante todo, efectiva.</p>
+        <div class="detail-stats">
+          <div class="stat">
+            <span class="num">0.1mm</span>
+            <span class="lbl">Precisión Clínica</span>
+          </div>
+          <div class="stat">
+            <span class="num">100%</span>
+            <span class="lbl">Biocompatibilidad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-head reveal">
+      <h2>Disciplinas en <span class="italic">Armonía</span></h2>
+      <p>Un enfoque multidisciplinar donde cada especialidad converge en un único propósito: la excelencia funcional y estética.</p>
+    </div>
+  </div>
+  <div style="padding:0 2rem">
+    <div class="gallery no-scrollbar reveal">
+      <div class="gallery-card">
+        <div class="inner">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Estética avanzada"/>
+          <div class="content">
+            <span class="num">Especialidad 01</span>
+            <h3>Estética Avanzada</h3>
+            <p class="desc">Carillas de porcelana y diseño de sonrisa mediante tecnología DSD (Digital Smile Design).</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="inner">
+          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80" alt="Implantología oral"/>
+          <div class="content">
+            <span class="num">Especialidad 02</span>
+            <h3>Implantología Oral</h3>
+            <p class="desc">Recuperación de piezas dentales con sistemas de fijación inmediata y máxima durabilidad.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="inner">
+          <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=900&q=80" alt="Ortodoncia invisible"/>
+          <div class="content">
+            <span class="num">Especialidad 03</span>
+            <h3>Ortodoncia Invisible</h3>
+            <p class="desc">Alineación dental discreta y cómoda diseñada íntegramente mediante flujos digitales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="inner">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80" alt="Periodoncia"/>
+          <div class="content">
+            <span class="num">Especialidad 04</span>
+            <h3>Periodoncia</h3>
+            <p class="desc">Cuidado integral de los tejidos de soporte para una salud oral que perdura.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="inner">
+          <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=900&q=80" alt="Odontopediatría"/>
+          <div class="content">
+            <span class="num">Especialidad 05</span>
+            <h3>Odontopediatría</h3>
+            <p class="desc">Atención dental especializada para los más pequeños en un ambiente relajado y cercano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <div class="container">
+    <div class="voices-grid">
+      <div>
+        <div class="voice reveal">
+          <span class="quote-mark">"</span>
+          <blockquote>La clínica rompe con el concepto frío del dentista. En Haginlari sentí que estaba en una galería de arte donde yo era la prioridad absoluta.</blockquote>
+          <div class="author-row">
+            <div class="avatar">JM</div>
+            <cite><span class="name">Jorge Mayor</span><span class="role">Empresario</span></cite>
+          </div>
+        </div>
+        <div class="voice reveal">
+          <span class="quote-mark">"</span>
+          <blockquote>Precisión asombrosa. Resolvieron un caso complejo con una naturalidad y calma que no había encontrado en años.</blockquote>
+          <div class="author-row">
+            <div class="avatar">EL</div>
+            <cite><span class="name">Eugenia López</span><span class="role">Arquitecta</span></cite>
+          </div>
+        </div>
+      </div>
+      <div class="voices-img reveal">
+        <img src="https://images.unsplash.com/photo-1582639510494-c80b5de9f148?auto=format&fit=crop&w=900&q=80" alt="Sonrisa natural radiante"/>
+        <div class="voices-stat">
+          <span class="big">+500</span>
+          <span class="label">Sonrisas Transformadas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>Ubicación <span class="italic">Privilegiada</span></h2>
+        <div class="contact-block">
+          <h4>Nuestra Sede</h4>
+          <p>Calle Ipartxiki, 14 bajo<br/>20304 Irun, Gipuzkoa</p>
+        </div>
+        <div class="contact-block">
+          <h4>Horario</h4>
+          <p>Lunes - Viernes<br/><span class="accent">09:00 - 20:00</span></p>
+        </div>
+        <div class="contact-actions">
+          <a href="tel:+34943617840" class="contact-link">
+            <span class="ico"><span class="material-symbols-outlined">call</span></span>
+            <span>943 617 840</span>
+          </a>
+          <a href="mailto:haginlari@hotmail.com" class="contact-link">
+            <span class="ico"><span class="material-symbols-outlined">mail</span></span>
+            <span>haginlari@hotmail.com</span>
+          </a>
+          <a href="https://wa.me/34943617840" class="contact-link">
+            <span class="ico"><span class="material-symbols-outlined">chat</span></span>
+            <span>WhatsApp directo</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-map reveal">
+        <div class="floating-hours">
+          <div class="title">Horario de Consulta</div>
+          <div class="row"><span>Lunes - Viernes</span><span>09:00 - 20:00</span></div>
+          <div class="row"><span>Sábados</span><span>Cita previa</span></div>
+        </div>
+        <iframe src="https://www.google.com/maps?q=Calle+Ipartxiki+14+Irun&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h3 class="reveal">Comience su nueva era hoy mismo.</h3>
+    <a href="tel:+34943617840" class="btn-huge reveal">Solicitar Diagnóstico Inicial</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Clínica Dental Haginlari</div>
+      <p>Elevando el estándar de la odontología contemporánea a través de la unión del arte clínico y la innovación científica.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegar</h5>
+      <a href="#services">Servicios</a>
+      <a href="#voices">Reseñas</a>
+      <a href="#contact">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#">Privacidad</a>
+      <a href="#">Cookies</a>
+      <a href="#">Aviso Legal</a>
+    </div>
+  </div>
+  <div class="footer-base">© 2026 Clínica Dental Haginlari · Ipartxiki 14 · Irun</div>
+</footer>
+
+<a href="https://wa.me/34943617840" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
